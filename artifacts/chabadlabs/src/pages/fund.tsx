@@ -17,7 +17,7 @@ const sections = [
     description:
       "ChabadLabs is built by volunteers. Your tips keep the servers running and the tools free.",
     cta: "Tip the Team",
-    href: "#",
+    href: "https://ko-fi.com/chabadlabs",
     external: true,
   },
   {
@@ -37,7 +37,7 @@ const sections = [
     description:
       "Donors and organizations who want to accelerate AI adoption across Chabad — let's talk.",
     cta: "Get in Touch",
-    href: "mailto:contact@chabadlabs.ai",
+    href: "mailto:mendy@jewishsandton.com",
     external: true,
   },
 ];

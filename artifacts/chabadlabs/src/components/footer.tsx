@@ -79,7 +79,7 @@ export function Footer() {
           <div className="footer-col flex flex-col gap-4 gsap-hidden">
             <h4 className="font-display font-bold text-foreground text-sm tracking-widest uppercase">Community</h4>
             <ul className="space-y-3 text-sm">
-              <li><a href="#" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"><span className="text-primary/50 text-xs">&gt;</span> WhatsApp Group</a></li>
+              <li><a href="https://chat.whatsapp.com/G1s5OjSGgkc3gOfOIdRh21" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"><span className="text-primary/50 text-xs">&gt;</span> WhatsApp Group</a></li>
               <li><Link href="/showcase" className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"><span className="text-primary/50 text-xs">&gt;</span> Submit a Project</Link></li>
               <li><Link href="/showcase/apply" className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"><span className="text-primary/50 text-xs">&gt;</span> Apply for a Grant</Link></li>
               <li><Link href="/fund" className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"><span className="text-primary/50 text-xs">&gt;</span> Fund</Link></li>

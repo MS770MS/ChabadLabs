@@ -55,7 +55,7 @@ export default function SkillsComingSoon() {
           </p>
 
           <div className="mt-8">
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a href="https://chat.whatsapp.com/G1s5OjSGgkc3gOfOIdRh21" target="_blank" rel="noopener noreferrer">
               <Button className="btn-futuristic gap-2">
                 Join the Community
                 <ArrowRight className="w-4 h-4" />
