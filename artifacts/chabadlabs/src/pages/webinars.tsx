@@ -117,6 +117,17 @@ export default function Webinars() {
                     transition={{ duration: 0.3, ease: "easeInOut" }}
                   >
                     <div className="px-6 md:px-8 pb-8 pt-2 border-t border-border/50">
+                      {(webinar as any).youtubeId && (
+                        <div className="mb-8 rounded-xl overflow-hidden aspect-video">
+                          <iframe
+                            className="w-full h-full"
+                            src={`https://www.youtube.com/embed/${(webinar as any).youtubeId}`}
+                            title={webinar.title}
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                          />
+                        </div>
+                      )}
                       <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
                         {webinar.summary}
                       </p>
