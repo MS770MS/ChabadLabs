@@ -1,0 +1,354 @@
+# ChabadLabs.ai — Replit Build Prompt
+
+Paste this entire prompt into Replit Agent.
+
+---
+
+## PROJECT OVERVIEW
+
+Build **ChabadLabs.ai** — a futuristic, dark-themed resource hub for Chabad shluchim to discover and deploy AI tools. The aesthetic is inspired by **dynexcoin.org**: deep dark backgrounds, bold oversized typography, gold glowing accents, generous whitespace, and a premium tech feel. Think Vercel meets crypto meets mission-driven community.
+
+**Tagline: "Welcome to the future of shlichus."**
+
+## TECH STACK
+
+- **Framework**: Next.js 14+ with App Router (`/app` directory)
+- **Styling**: Tailwind CSS
+- **Components**: shadcn/ui (dark theme)
+- **Icons**: Lucide React
+- **Fonts**: Use `Inter` for body and `Space Grotesk` or `Sora` for headings (import from Google Fonts)
+- **Data**: Static JSON files in `/data` (no database for MVP)
+- **Chat**: Mock AI chat (no API key needed — hardcoded responses)
+- **Deployment**: Replit
+
+## DESIGN SYSTEM
+
+### Colors (add to Tailwind config as CSS variables for shadcn dark theme)
+
+```
+Background:      #06060A (near-black, deep space)
+Surface:         #0F0F15 (cards, elevated surfaces)
+Surface-light:   #16161F (hover states, secondary cards)
+Border:          #1E1E2A (subtle borders on cards)
+Border-glow:     #C49A2A33 (gold glow at 20% opacity for card borders)
+Text-primary:    #FFFFFF
+Text-secondary:  #8A8AA3 (muted text, descriptions)
+Text-tertiary:   #55556A (labels, metadata)
+Gold:            #C49A2A (primary accent — buttons, highlights, glows)
+Gold-light:      #D4AF37 (hover state)
+Gold-glow:       rgba(196, 154, 42, 0.15) (background glow effects)
+Electric-blue:   #3B82F6 (secondary accent — links, badges)
+Success:         #22C55E (beginner badges)
+Purple:          #A855F7 (advanced badges)
+```
+
+### Design Rules
+
+- **Dark everywhere.** Background is #06060A. No white backgrounds anywhere.
+- **Gold is the star.** Primary buttons, accent borders, the chat bubble, hover glows — all gold.
+- **Typography is bold and oversized.** Hero headline should be 64-80px. Section titles 40-48px. Let text breathe.
+- **Numbered section labels** like Dynex uses: small monospaced gold text above sections (e.g., "001 — RESOURCES", "002 — WEBINARS", "003 — GET STARTED").
+- **Cards have subtle glowing borders.** Use `border border-[#1E1E2A] hover:border-[#C49A2A]/30` with a subtle `shadow-[0_0_30px_rgba(196,154,42,0.08)]` on hover.
+- **Generous spacing.** Sections should have 120-160px vertical padding. Cards should breathe. Don't crowd.
+- **Bento grid** on the landing page for feature showcase — asymmetric card sizes like Linear/Vercel dashboards.
+- **Smooth transitions.** All hover states transition 300ms. Cards lift slightly on hover.
+- **No images or stock photos.** Use Lucide icons, abstract gradients, or subtle grid patterns for visual interest.
+- **Mobile-first.** Everything must look great on phones. Bento grid collapses to single column.
+
+### Subtle Background Effects
+
+- Add a faint radial gold gradient glow behind the hero section (centered, 40% opacity, very large radius)
+- Optional: a subtle CSS grid pattern overlay on the background (thin lines at ~5% opacity) to give depth — like graph paper in the dark
+
+## SITE STRUCTURE & PAGES
+
+### 1. Landing Page (`/`)
+
+**Hero Section** (full viewport height, centered):
+- Small gold label above headline: "CHABADLABS.AI"
+- Giant headline: **"Welcome to the future of shlichus"** (64-80px, white, bold, Space Grotesk/Sora)
+- Subline: **"Your AI-powered command center. Tools, resources, and a community of builders — transforming shlichus with cutting-edge technology."** (18-20px, text-secondary color)
+- Two buttons side by side:
+  - Primary (gold bg, dark text): "Explore Resources →"
+  - Secondary (transparent, gold border): "Get Started"
+- Below buttons: small muted text: "Open source · Community driven · Security first"
+- Subtle radial gold glow behind the hero text area
+
+**Bento Grid Section** — below hero, section label: "001 — WHAT WE OFFER"
+
+Layout: 2x2 asymmetric grid on desktop (left card tall spanning 2 rows, right side has 2 stacked cards, plus a wide card below). On mobile: single column stack.
+
+Card 1 (large, left, spans 2 rows): **Resource Library**
+- Lucide icon: `Library` or `BookOpen`
+- Title: "Curated Resource Library"
+- Description: "Free cloud credits, AI tools, getting-started guides, and security best practices — everything a shliach needs, organized and searchable."
+- Small gold link: "Browse Resources →"
+
+Card 2 (top-right): **Webinar Archive**
+- Lucide icon: `PlayCircle`
+- Title: "Webinar Archive"
+- Description: "Watch community sessions with AI-generated summaries and key takeaways."
+- Small gold link: "View Webinars →"
+
+Card 3 (bottom-right): **AI Chat Assistant**
+- Lucide icon: `MessageSquare`
+- Title: "AI Assistant"
+- Gold "COMING SOON" badge
+- Description: "Ask questions, get instant answers, and navigate ChabadLabs — powered by Claude."
+
+Card 4 (full-width below): **Nanoclaw / Security**
+- Lucide icon: `Shield`
+- Title: "Built on Nanoclaw — Security First"
+- Description: "Every task runs in its own sandboxed container. No data leaks. No prompt injection. 8,000 lines of auditable code. Trusted by Docker."
+- Small gold link: "Learn More →"
+
+**Stats Row** — section label: "002 — THE NETWORK"
+- Horizontal row of 3-4 stats with large numbers and labels:
+  - "12+" / "Curated Resources"
+  - "3+" / "Community Webinars"
+  - "157" / "Active Nanoclaw Containers" (from Yonatan's setup)
+  - "Open Source" / "Community Driven"
+- Numbers should be large (48px), gold colored. Labels in text-secondary.
+
+**Community CTA Section** — section label: "003 — JOIN US"
+- Centered text: "Built by shluchim, for shluchim."
+- Description: "Join a growing network of builders who are bringing AI to every Chabad house."
+- Gold button: "Join the Community"
+- Below: small social/community link icons
+
+**Footer**:
+- Dark surface background (#0F0F15)
+- Left: ChabadLabs wordmark + "AI for Shluchim" subtitle
+- Center: nav links (Resources, Webinars, Get Started)
+- Right: "Join Community" link
+- Bottom: "© 2026 ChabadLabs.ai · Open Source · Built with ❤️ for Shluchim"
+
+### 2. Resources Page (`/resources`)
+
+Section label at top: "001 — RESOURCE LIBRARY"
+Big page title: **"Resources"**
+Subtitle: "Everything you need to get started with AI — curated and organized."
+
+**Search + Filters:**
+- Dark-themed search input with gold focus ring
+- Filter chips below: All (default selected, gold), Cloud Credits, AI Tools, Getting Started, Best Practices, Security
+- Active filter chip has gold background; inactive chips have surface background with border
+
+**Resource Grid** — 3 columns desktop, 2 tablet, 1 mobile:
+
+Each resource card:
+- Surface background (#0F0F15) with border (#1E1E2A)
+- On hover: border goes gold-glow, subtle shadow, slight lift
+- Top: Category badge (small, colored chip — gold for Cloud Credits, blue for AI Tools, green for Getting Started, purple for Best Practices, red for Security)
+- Title (white, bold, 18px)
+- Description (text-secondary, 14px, 2-3 lines, line-clamp)
+- Bottom row: Difficulty badge (Beginner=green, Intermediate=blue, Advanced=purple) + "Visit →" link in gold
+- External links open in new tab
+
+**Starter data** — populate `/data/resources.json` with these entries:
+
+```json
+[
+  { "id": 1, "title": "DigitalOcean Nonprofit Credits", "description": "Free $2,000/year cloud computing credits for registered nonprofits. Perfect for hosting your Nanoclaw instance.", "category": "Cloud Credits", "difficulty": "Beginner", "url": "https://www.digitalocean.com/impact/nonprofits" },
+  { "id": 2, "title": "Microsoft Azure Nonprofit", "description": "Up to $2,000 in annual Azure credits for qualified nonprofits. Requires application and verification.", "category": "Cloud Credits", "difficulty": "Beginner", "url": "https://nonprofit.microsoft.com" },
+  { "id": 3, "title": "Azure Free Trial", "description": "Instant $200 credit for 30 days — no nonprofit status needed. Great for testing your first VPS.", "category": "Cloud Credits", "difficulty": "Beginner", "url": "https://azure.microsoft.com/free" },
+  { "id": 4, "title": "Claude by Anthropic", "description": "The recommended AI model for ChabadLabs. Powerful reasoning, excellent at coding, and built with safety in mind.", "category": "AI Tools", "difficulty": "Beginner", "url": "https://claude.ai" },
+  { "id": 5, "title": "Nanoclaw", "description": "Secure sandboxed AI agent platform. Each chat runs in its own Docker container — no data leaks, no prompt injection.", "category": "AI Tools", "difficulty": "Intermediate", "url": "https://github.com/nanoclaw/nanoclaw" },
+  { "id": 6, "title": "AccuFlow", "description": "Task and calendar management that integrates beautifully with your Nanoclaw AI assistant for daily summaries.", "category": "AI Tools", "difficulty": "Intermediate", "url": "https://accuflow.com" },
+  { "id": 7, "title": "Claude Code", "description": "Anthropic's command-line AI coding assistant. Build and deploy from your terminal with natural language.", "category": "AI Tools", "difficulty": "Intermediate", "url": "https://docs.anthropic.com/en/docs/claude-code" },
+  { "id": 8, "title": "TailScale", "description": "Free secure VPN connecting your machines. Essential for safe remote access to your VPS. Free for personal use.", "category": "Security", "difficulty": "Beginner", "url": "https://tailscale.com" },
+  { "id": 9, "title": "What is Claude? A Beginner's Guide", "description": "Plain-language introduction to AI for shluchim who are just getting started. No technical background needed.", "category": "Getting Started", "difficulty": "Beginner", "url": "#" },
+  { "id": 10, "title": "Prompt Engineering Basics", "description": "How to communicate with AI effectively. Patterns, examples, and templates for shluchim.", "category": "Best Practices", "difficulty": "Beginner", "url": "#" },
+  { "id": 11, "title": "Building Your First Nanoclaw Skill", "description": "Step-by-step guide to creating a custom AI skill. From concept to deployment on your instance.", "category": "Best Practices", "difficulty": "Intermediate", "url": "#" },
+  { "id": 12, "title": "VPS Security Essentials", "description": "SSH keys, firewalls, fail2ban, and TailScale. Lock down your server before deploying anything.", "category": "Security", "difficulty": "Intermediate", "url": "#" }
+]
+```
+
+### 3. Webinars Page (`/webinars`)
+
+Section label: "001 — WEBINAR ARCHIVE"
+Page title: **"Webinars"**
+Subtitle: "Learn from the community. Each session includes AI-generated summaries and key takeaways."
+
+**Webinar cards** — full-width stacked list, newest first. Each card:
+- Surface background with border, gold-glow hover
+- Left side: date (formatted nicely), difficulty badge, presenter
+- Right side / main content: title (large, bold), summary text (text-secondary)
+- Collapsible "Key Takeaways" section (click to expand, shows bullet list)
+- "Watch Recording →" gold button/link
+
+Populate `/data/webinars.json`:
+```json
+[
+  {
+    "id": 1,
+    "title": "AI Tools Deep Dive",
+    "date": "2026-03-15",
+    "presenter": "Community Session",
+    "difficulty": "Advanced",
+    "summary": "An advanced session covering cutting-edge AI tools and workflows. Covered Claude, Manus, and emerging tools with live demonstrations and real-world use cases from shluchim.",
+    "takeaways": [
+      "Multiple AI tools exist beyond ChatGPT — Claude excels at coding and reasoning",
+      "Manus can autonomously create presentations and research",
+      "Free tiers and nonprofit credits make most tools accessible",
+      "Always verify AI outputs before using in production"
+    ],
+    "recordingUrl": "#",
+    "tags": ["Claude", "Manus", "Tools", "Advanced"]
+  },
+  {
+    "id": 2,
+    "title": "AI Basics for Shluchim",
+    "date": "2026-03-22",
+    "presenter": "Community Session",
+    "difficulty": "Beginner",
+    "summary": "A beginner-friendly introduction to AI concepts and terminology. What is AI, what are language models, and how to get started with ChatGPT and Claude for everyday shlichus tasks.",
+    "takeaways": [
+      "AI is a tool that amplifies your work — not a replacement",
+      "Start with simple tasks like drafting emails, then build up",
+      "Claude and ChatGPT are the two leading options",
+      "Prompt clearly and specifically for best results"
+    ],
+    "recordingUrl": "#",
+    "tags": ["Basics", "ChatGPT", "Claude", "Beginner"]
+  },
+  {
+    "id": 3,
+    "title": "Nanoclaw: Secure AI Agents",
+    "date": "2026-03-29",
+    "presenter": "Yonatan Azrielant",
+    "difficulty": "Intermediate",
+    "summary": "Deep dive into Nanoclaw's sandboxed AI agent architecture. Why traditional agents like Claudebot pose security risks, how Docker-based isolation solves them, and a live demo of a personal AI assistant managing calendars, emails, and group summaries.",
+    "takeaways": [
+      "Monolithic agents risk prompt injection and data leaks between tasks",
+      "Nanoclaw isolates each chat in its own Docker container",
+      "8,000 lines of auditable code vs 30,000+ for alternatives",
+      "Docker partnership validates the sandboxing approach",
+      "Each WhatsApp/Telegram/Slack channel gets its own isolated agent"
+    ],
+    "recordingUrl": "#",
+    "tags": ["Nanoclaw", "Security", "Agents", "Docker"]
+  }
+]
+```
+
+### 4. Get Started Page (`/get-started`)
+
+Section label: "001 — YOUR JOURNEY STARTS HERE"
+Page title: **"Get Started"**
+Subtitle: "From zero to your own AI assistant. Follow the path."
+
+**Visual stepper/timeline layout** — vertical timeline with numbered steps, gold accent line connecting them. Each step is a card on alternating sides (or left-aligned on mobile).
+
+**Step 1: Choose Your Path**
+Two cards side by side:
+- Card A: "🌱 I'm New to AI" — "Start with the basics. Learn what AI is and how it can transform your shlichus." → links to beginner resources + webinars
+- Card B: "🚀 I'm Ready to Build" — "Skip the intro. Set up your own AI assistant today." → jumps to Step 3
+
+**Step 2: Learn the Basics**
+- Start with Claude at claude.ai — it's free to try
+- Watch the "AI Basics for Shluchim" webinar
+- Browse our beginner resources
+- Each item is a mini-link card
+
+**Step 3: Set Up Your Server**
+- Get free cloud credits (DigitalOcean / Azure links)
+- Spin up a VPS: 8GB RAM, 2 vCPUs, Ubuntu 24.04 LTS
+- Run the secure setup script
+- Note in a gold-bordered callout box: "Setup script and guided walkthrough — contact the team for early access"
+
+**Step 4: Deploy Nanoclaw**
+- Fork the Nanoclaw repo on GitHub
+- Clone to your VPS
+- Open Claude Code and follow the repo setup instructions
+- Link to Nanoclaw GitHub with gold button
+
+**Step 5: Build & Share**
+- Create custom skills for your shlichus needs
+- Share via GitHub Gist
+- Submit to the ChabadLabs Skill Marketplace (coming soon badge)
+
+**Step 6: Join the Community**
+- Join the builders chat
+- Attend live webinars
+- Contribute to open source
+- Gold CTA: "Join the Community"
+
+### 5. AI Chat Widget (Floating, all pages)
+
+**Gold floating circle** in bottom-right corner, 56px, with Lucide `MessageSquare` icon in dark color.
+Small "BETA" badge attached to the bubble (tiny, gold outline).
+Subtle gold pulse animation on the bubble (CSS animation, gentle).
+
+**On click, opens chat panel:**
+- Panel slides up from bottom-right, ~400px wide, ~500px tall
+- Dark surface background (#0F0F15) with gold top border
+- Header: "ChabadLabs Assistant" with gold dot indicator + close X button
+- Message area with chat bubbles:
+  - Assistant messages: surface-light background, left-aligned
+  - User messages: gold background with dark text, right-aligned
+- Input area: dark input field with gold send button
+
+**Pre-loaded greeting:**
+"✨ Shalom! I'm the ChabadLabs assistant. I can help you find resources, understand AI concepts, or get started with Nanoclaw. What would you like to know?"
+
+**Mock response for ANY user message:**
+"I'm being set up and will be fully powered soon! In the meantime, here's what I'd suggest:
+
+→ **New to AI?** Check out our [Resources](/resources) page
+→ **Ready to build?** Head to [Get Started](/get-started)
+→ **Want to learn?** Browse our [Webinars](/webinars)
+
+You can also join the community chat for live help from fellow shluchim."
+
+(Make the links actual clickable Next.js links in the response)
+
+### 6. Navigation
+
+**Top navbar** — fixed, transparent on hero, solid dark (#06060A with backdrop-blur) on scroll:
+- Left: "ChabadLabs" wordmark in bold white + small gold dot
+- Center: nav links (Resources, Webinars, Get Started) — white text, gold on hover/active, with subtle underline animation
+- Right: gold-outlined button "Join Community →"
+- Mobile: hamburger menu icon, opens full-screen dark overlay with centered links
+
+## FILE STRUCTURE
+
+```
+/app
+  layout.tsx           — Root layout: fonts, metadata, nav + footer + chat widget
+  page.tsx             — Landing page (hero + bento + stats + CTA)
+  /resources
+    page.tsx           — Resource library with search and filters
+  /webinars
+    page.tsx           — Webinar archive
+  /get-started
+    page.tsx           — Step-by-step onboarding guide
+/components
+  navbar.tsx           — Fixed nav with scroll behavior
+  footer.tsx           — Dark footer
+  chat-widget.tsx      — Floating gold chat bubble + panel
+  resource-card.tsx    — Resource card with hover glow
+  webinar-card.tsx     — Expandable webinar entry
+  bento-grid.tsx       — Landing page feature grid
+  section-label.tsx    — "001 — LABEL" style section headers
+  difficulty-badge.tsx — Colored difficulty badges
+  stat-card.tsx        — Stats row items
+/data
+  resources.json
+  webinars.json
+/styles
+  globals.css          — CSS variables, grid pattern overlay, glow effects
+```
+
+## CRITICAL NOTES
+
+1. **Dark theme ONLY.** Configure shadcn/ui with dark mode. Set `<html className="dark">` in the root layout. Background is always #06060A.
+2. **Gold (#C49A2A) is the primary accent everywhere.** Buttons, hover states, borders, badges, the chat bubble, links on hover.
+3. **No images or stock photos.** Icons only (Lucide React). Visual interest comes from the layout, spacing, glows, and typography.
+4. **Chat widget on ALL pages** — rendered in the root layout as a fixed-position element.
+5. **All external links open in new tabs** with `target="_blank" rel="noopener noreferrer"`.
+6. **Mobile-first responsive.** Many shluchim will access from phones.
+7. **Section labels** are a consistent pattern: monospaced, uppercase, gold, small (12-14px), with a number prefix (001, 002, etc.).
+8. **Keep code clean and modular.** This codebase will be handed to Claude Code for the next iteration. Components should be self-contained and well-named.
+9. **Smooth animations.** Cards: `transition-all duration-300`. Hover: translate-y-[-2px]. Chat panel: slide-up animation.
+10. **No authentication, database, or payments.** This is a static MVP — all data from JSON files.
