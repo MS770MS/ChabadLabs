@@ -64,35 +64,26 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Links Col */}
+          {/* Navigate Col */}
           <div className="footer-col flex flex-col gap-4 gsap-hidden">
-            <h4 className="font-display font-bold text-foreground text-sm tracking-widest uppercase">Navigation</h4>
+            <h4 className="font-display font-bold text-foreground text-sm tracking-widest uppercase">Navigate</h4>
             <ul className="space-y-3 text-sm">
-              <li><Link href="/resources" className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"><span className="text-primary/50 text-xs">&gt;</span> Resource Library</Link></li>
-              <li><Link href="/webinars" className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"><span className="text-primary/50 text-xs">&gt;</span> Webinar Archive</Link></li>
-              <li><Link href="/get-started" className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"><span className="text-primary/50 text-xs">&gt;</span> Get Started Path</Link></li>
+              <li><Link href="/tools" className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"><span className="text-primary/50 text-xs">&gt;</span> Tools</Link></li>
+              <li><Link href="/webinars" className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"><span className="text-primary/50 text-xs">&gt;</span> Webinars</Link></li>
+              <li><Link href="/showcase" className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"><span className="text-primary/50 text-xs">&gt;</span> Live Projects</Link></li>
+              <li><Link href="/get-started" className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"><span className="text-primary/50 text-xs">&gt;</span> Get Started</Link></li>
             </ul>
           </div>
 
-          {/* CTA Col */}
+          {/* Community Col */}
           <div className="footer-col flex flex-col gap-4 gsap-hidden">
-            <h4 className="font-display font-bold text-foreground text-sm tracking-widest uppercase">Support</h4>
-            <p className="text-muted-foreground text-sm">
-              Help keep this project running. Every contribution fuels the mission.
-            </p>
-            <a 
-              href="https://ko-fi.com/tenpr" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-primary hover:text-primary/80 font-medium inline-flex items-center gap-2 transition-colors mt-2"
-            >
-              <div className="w-8 h-8 rounded border border-primary/50 flex items-center justify-center bg-primary/10 hover:bg-primary/20 transition-colors">
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-                </svg>
-              </div>
-              Support the Team
-            </a>
+            <h4 className="font-display font-bold text-foreground text-sm tracking-widest uppercase">Community</h4>
+            <ul className="space-y-3 text-sm">
+              <li><a href="#" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"><span className="text-primary/50 text-xs">&gt;</span> WhatsApp Group</a></li>
+              <li><Link href="/showcase" className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"><span className="text-primary/50 text-xs">&gt;</span> Submit a Project</Link></li>
+              <li><Link href="/showcase/apply" className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"><span className="text-primary/50 text-xs">&gt;</span> Apply for a Grant</Link></li>
+              <li><Link href="/fund" className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"><span className="text-primary/50 text-xs">&gt;</span> Fund</Link></li>
+            </ul>
           </div>
         </div>
 

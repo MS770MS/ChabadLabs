@@ -92,7 +92,7 @@ export default function GetStarted() {
       icon: <Rocket className="w-6 h-6 text-primary" />,
       content: (
         <div className="grid sm:grid-cols-2 gap-4">
-          <Link href="/resources">
+          <Link href="/tools">
             <div className="bg-transparent border border-border/50 p-6 rounded-xl h-full transition-all group card-futuristic cursor-pointer">
               <h4 className="font-bold text-lg mb-2 flex items-center gap-2">
                 <span className="text-2xl">🌱</span> I'm New to AI

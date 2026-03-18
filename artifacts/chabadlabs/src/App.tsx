@@ -6,7 +6,6 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 
 // Pages
 import Home from "@/pages/home";
-import Resources from "@/pages/resources";
 import Tools from "@/pages/tools";
 import Webinars from "@/pages/webinars";
 import GetStarted from "@/pages/get-started";
