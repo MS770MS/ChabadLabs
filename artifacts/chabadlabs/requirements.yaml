@@ -1,0 +1,10 @@
+packages:
+  "framer-motion": "For smooth page transitions, chat widget sliding, and premium hover effects."
+  "clsx": "Utility for constructing class names"
+  "tailwind-merge": "Utility for merging tailwind classes safely"
+  "date-fns": "For formatting webinar dates nicely"
+
+notes:
+  - This is a fully static frontend using imported JSON data.
+  - No backend API calls are necessary.
+  - Wouter is used for routing.
