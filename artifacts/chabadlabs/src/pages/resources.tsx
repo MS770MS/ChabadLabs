@@ -1,14 +1,20 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Search, ExternalLink } from "lucide-react";
 import { SectionLabel } from "@/components/section-label";
 import { CategoryBadge, Category } from "@/components/category-badge";
 import { DifficultyBadge, Difficulty } from "@/components/difficulty-badge";
 import { motion, AnimatePresence } from "framer-motion";
 import resourcesData from "@/data/resources.json";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Resources() {
   const [searchQuery, setSearchQuery] = useState("");
   const [activeFilter, setActiveFilter] = useState<string>("All");
+  const containerRef = useRef<HTMLDivElement>(null);
 
   const filters = ["All", "Cloud Credits", "AI Tools", "Getting Started", "Best Practices", "Security"];
 
@@ -22,19 +28,60 @@ export default function Resources() {
     return matchesFilter && matchesSearch;
   });
 
+  useGSAP(() => {
+    // Header reveal
+    const tl = gsap.timeline();
+    tl.fromTo(".page-title",
+      { y: 40, opacity: 0, visibility: "hidden" },
+      { y: 0, opacity: 1, visibility: "visible", duration: 1, ease: "power3.out" }
+    )
+    .fromTo(".page-subtitle",
+      { opacity: 0, y: 20, visibility: "hidden" },
+      { opacity: 1, y: 0, visibility: "visible", duration: 0.8, ease: "power3.out" },
+      "-=0.5"
+    )
+    .fromTo(".search-filter-section",
+      { opacity: 0, y: 20, visibility: "hidden" },
+      { opacity: 1, y: 0, visibility: "visible", duration: 0.8, ease: "power3.out" },
+      "-=0.4"
+    );
+  }, { scope: containerRef });
+
+  useGSAP(() => {
+    // We only want to animate cards that aren't already visible.
+    // Framer motion handles exit/layout. We'll use GSAP for scroll entrance.
+    const cards = gsap.utils.toArray<Element>(".resource-card:not(.animated)");
+    
+    if (cards.length > 0) {
+      ScrollTrigger.batch(cards, {
+        interval: 0.1, // time window to batch
+        batchMax: 3,   // max amount per batch
+        onEnter: (elements) => {
+          gsap.fromTo(elements,
+            { y: 40, opacity: 0, scale: 0.95 },
+            { y: 0, opacity: 1, scale: 1, duration: 0.6, stagger: 0.1, ease: "power2.out", overwrite: true, onComplete: () => {
+                elements.forEach((el: any) => el.classList.add("animated"));
+            }}
+          );
+        },
+        start: "top 95%"
+      });
+    }
+  }, { scope: containerRef, dependencies: [filteredResources] });
+
   return (
-    <div className="pt-32 pb-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-screen">
+    <div ref={containerRef} className="pt-32 pb-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-screen">
       <SectionLabel number="001" label="RESOURCE LIBRARY" />
       
       <div className="mb-12">
-        <h1 className="text-4xl md:text-6xl font-display font-bold mb-4">Resources</h1>
-        <p className="text-xl text-muted-foreground max-w-2xl">
+        <h1 className="page-title text-4xl md:text-6xl font-display font-bold mb-4 gsap-hidden">Resources</h1>
+        <p className="page-subtitle text-xl text-muted-foreground max-w-2xl gsap-hidden">
           A curated collection of tools, guides, and credits to accelerate your AI journey.
         </p>
       </div>
 
       {/* Search and Filter */}
-      <div className="flex flex-col md:flex-row gap-6 mb-12">
+      <div className="search-filter-section flex flex-col md:flex-row gap-6 mb-12 gsap-hidden">
         <div className="relative flex-1 max-w-md">
           <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
           <input 
@@ -85,7 +132,7 @@ export default function Resources() {
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.2 }}
                 key={resource.id}
-                className="bg-transparent border border-border rounded-2xl p-6 flex flex-col transition-all duration-300 group card-futuristic"
+                className="resource-card bg-transparent border border-border rounded-2xl p-6 flex flex-col transition-all duration-300 group card-futuristic"
               >
                 <div className="mb-4">
                   <CategoryBadge category={resource.category as Category} />

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { format, parseISO } from "date-fns";
 import { ChevronDown, ChevronUp, PlayCircle } from "lucide-react";
 import { SectionLabel } from "@/components/section-label";
@@ -6,22 +6,59 @@ import { DifficultyBadge, Difficulty } from "@/components/difficulty-badge";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import webinarsData from "@/data/webinars.json";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Webinars() {
   const [expandedId, setExpandedId] = useState<number | null>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   // Sort by newest first
   const sortedWebinars = [...webinarsData].sort((a, b) => 
     new Date(b.date).getTime() - new Date(a.date).getTime()
   );
 
+  useGSAP(() => {
+    const tl = gsap.timeline();
+    tl.fromTo(".page-title",
+      { y: 40, opacity: 0, visibility: "hidden" },
+      { y: 0, opacity: 1, visibility: "visible", duration: 1, ease: "power3.out" }
+    )
+    .fromTo(".page-subtitle",
+      { opacity: 0, y: 20, visibility: "hidden" },
+      { opacity: 1, y: 0, visibility: "visible", duration: 0.8, ease: "power3.out" },
+      "-=0.5"
+    );
+
+    // Stagger cards from alternating sides
+    const cards = gsap.utils.toArray(".webinar-card");
+    cards.forEach((card: any, i) => {
+      const isOdd = i % 2 !== 0;
+      gsap.fromTo(card,
+        { x: isOdd ? 50 : -50, opacity: 0, visibility: "hidden" },
+        { 
+          x: 0, opacity: 1, visibility: "visible", duration: 0.8, ease: "power3.out",
+          scrollTrigger: {
+            trigger: card,
+            start: "top 85%",
+            once: true
+          }
+        }
+      );
+    });
+
+  }, { scope: containerRef });
+
   return (
-    <div className="pt-32 pb-24 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 min-h-screen">
+    <div ref={containerRef} className="pt-32 pb-24 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 min-h-screen">
       <SectionLabel number="001" label="WEBINAR ARCHIVE" />
       
       <div className="mb-12">
-        <h1 className="text-4xl md:text-6xl font-display font-bold mb-4">Webinars</h1>
-        <p className="text-xl text-muted-foreground max-w-2xl">
+        <h1 className="page-title text-4xl md:text-6xl font-display font-bold mb-4 gsap-hidden">Webinars</h1>
+        <p className="page-subtitle text-xl text-muted-foreground max-w-2xl gsap-hidden">
           Learn directly from community experts. Recorded sessions covering basics, advanced tools, and deep dives into Nanoclaw.
         </p>
       </div>
@@ -33,7 +70,7 @@ export default function Webinars() {
           return (
             <div 
               key={webinar.id} 
-              className={`bg-transparent border rounded-2xl overflow-hidden transition-all duration-300 card-futuristic ${
+              className={`webinar-card gsap-hidden bg-transparent border rounded-2xl overflow-hidden transition-all duration-300 card-futuristic ${
                 isExpanded ? "border-transparent shadow-[0_0_30px_-10px_rgba(196,154,42,0.15)]" : "border-border/50"
               }`}
             >

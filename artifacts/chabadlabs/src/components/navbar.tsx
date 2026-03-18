@@ -1,14 +1,17 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "./ui/button";
 import { AnimatePresence, motion } from "framer-motion";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 export function Navbar() {
   const [location] = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const headerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,6 +26,25 @@ export function Navbar() {
     setIsMobileMenuOpen(false);
   }, [location]);
 
+  useGSAP(() => {
+    const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+    
+    tl.fromTo(".nav-logo", 
+        { x: -30, opacity: 0, visibility: "hidden" },
+        { x: 0, opacity: 1, visibility: "visible", duration: 0.8 }
+      )
+      .fromTo(".nav-cta", 
+        { x: 30, opacity: 0, visibility: "hidden" },
+        { x: 0, opacity: 1, visibility: "visible", duration: 0.8 }, 
+        0
+      )
+      .fromTo(".nav-item", 
+        { y: -20, opacity: 0, visibility: "hidden" },
+        { y: 0, opacity: 1, visibility: "visible", stagger: 0.1, duration: 0.6 }, 
+        0.2
+      );
+  }, { scope: headerRef });
+
   const navLinks = [
     { href: "/resources", label: "Resources" },
     { href: "/webinars", label: "Webinars" },
@@ -32,6 +54,7 @@ export function Navbar() {
   return (
     <>
       <header
+        ref={headerRef}
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
           isScrolled ? "bg-background/80 backdrop-blur-xl border-b border-primary/20 shadow-[0_4px_30px_hsl(var(--primary)/0.1)]" : "bg-transparent py-2 border-b border-transparent"
@@ -39,7 +62,7 @@ export function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 md:h-20 flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-1.5 group">
+          <Link href="/" className="nav-logo flex items-center gap-1.5 group gsap-hidden">
             <span className="font-display font-bold text-xl md:text-2xl text-foreground tracking-tight">
               ChabadLabs
             </span>
@@ -53,7 +76,7 @@ export function Navbar() {
                 key={link.href} 
                 href={link.href}
                 className={cn(
-                  "text-sm font-medium transition-colors relative py-2",
+                  "nav-item text-sm font-medium transition-colors relative py-2 gsap-hidden",
                   location === link.href ? "text-primary" : "text-muted-foreground hover:text-primary"
                 )}
               >
@@ -70,14 +93,14 @@ export function Navbar() {
 
           {/* CTA & Mobile Toggle */}
           <div className="flex items-center gap-4">
-            <Button variant="outline" className="hidden md:inline-flex" asChild>
+            <Button variant="outline" className="nav-cta hidden md:inline-flex gsap-hidden" asChild>
               <a href="https://github.com/nanoclaw/nanoclaw" target="_blank" rel="noopener noreferrer">
                 Join Community &rarr;
               </a>
             </Button>
             
             <button 
-              className="md:hidden p-2 text-foreground"
+              className="nav-cta md:hidden p-2 text-foreground gsap-hidden"
               onClick={() => setIsMobileMenuOpen(true)}
             >
               <Menu className="w-6 h-6" />

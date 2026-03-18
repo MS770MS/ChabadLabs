@@ -22,7 +22,7 @@ pnpm workspace monorepo using TypeScript. Each package manages its own dependenc
 artifacts-monorepo/
 ├── artifacts/              # Deployable applications
 │   ├── api-server/         # Express API server
-│   └── chabadlabs/         # ChabadLabs.ai — dark-themed AI resource hub (React + Vite, preview at /)
+│   └── chabadlabs/         # ChabadLabs.ai — dark-themed AI resource hub (React + Vite + GSAP, preview at /)
 ├── lib/                    # Shared libraries
 │   ├── api-spec/           # OpenAPI spec + Orval codegen config
 │   ├── api-client-react/   # Generated React Query hooks
