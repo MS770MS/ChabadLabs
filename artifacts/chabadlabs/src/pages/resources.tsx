@@ -1,8 +1,8 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useMemo } from "react";
 import { Search, ExternalLink } from "lucide-react";
 import { SectionLabel } from "@/components/section-label";
-import { CategoryBadge, Category } from "@/components/category-badge";
-import { DifficultyBadge, Difficulty } from "@/components/difficulty-badge";
+import { CategoryBadge } from "@/components/category-badge";
+import { TypeBadge } from "@/components/difficulty-badge";
 import { motion, AnimatePresence } from "framer-motion";
 import resourcesData from "@/data/resources.json";
 import { useGSAP } from "@gsap/react";
@@ -11,25 +11,35 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
+const PAGE_SIZE = 30;
+
 export default function Resources() {
   const [searchQuery, setSearchQuery] = useState("");
   const [activeFilter, setActiveFilter] = useState<string>("All");
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  const filters = ["All", "Cloud Credits", "AI Tools", "Getting Started", "Best Practices", "Security"];
+  const categories = useMemo(() => {
+    const cats = new Set(resourcesData.map((r) => r.category));
+    return ["All", ...Array.from(cats).sort()];
+  }, []);
 
-  const filteredResources = resourcesData.filter((resource) => {
-    const matchesFilter = activeFilter === "All" || resource.category === activeFilter;
-    const searchLower = searchQuery.toLowerCase();
-    const matchesSearch = 
-      resource.title.toLowerCase().includes(searchLower) || 
-      resource.description.toLowerCase().includes(searchLower);
-    
-    return matchesFilter && matchesSearch;
-  });
+  const filteredResources = useMemo(() => {
+    return resourcesData.filter((resource) => {
+      const matchesFilter = activeFilter === "All" || resource.category === activeFilter;
+      const searchLower = searchQuery.toLowerCase();
+      const matchesSearch =
+        resource.title.toLowerCase().includes(searchLower) ||
+        resource.description.toLowerCase().includes(searchLower) ||
+        resource.category.toLowerCase().includes(searchLower);
+      return matchesFilter && matchesSearch;
+    });
+  }, [activeFilter, searchQuery]);
+
+  const visibleResources = filteredResources.slice(0, visibleCount);
+  const hasMore = visibleCount < filteredResources.length;
 
   useGSAP(() => {
-    // Header reveal
     const tl = gsap.timeline();
     tl.fromTo(".page-title",
       { y: 40, opacity: 0, visibility: "hidden" },
@@ -48,14 +58,11 @@ export default function Resources() {
   }, { scope: containerRef });
 
   useGSAP(() => {
-    // We only want to animate cards that aren't already visible.
-    // Framer motion handles exit/layout. We'll use GSAP for scroll entrance.
     const cards = gsap.utils.toArray<Element>(".resource-card:not(.animated)");
-    
     if (cards.length > 0) {
       ScrollTrigger.batch(cards, {
-        interval: 0.1, // time window to batch
-        batchMax: 3,   // max amount per batch
+        interval: 0.1,
+        batchMax: 3,
         onEnter: (elements) => {
           gsap.fromTo(elements,
             { y: 40, opacity: 0, scale: 0.95 },
@@ -67,40 +74,39 @@ export default function Resources() {
         start: "top 95%"
       });
     }
-  }, { scope: containerRef, dependencies: [filteredResources] });
+  }, { scope: containerRef, dependencies: [visibleResources] });
 
   return (
     <div ref={containerRef} className="pt-32 pb-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-screen">
       <SectionLabel number="001" label="RESOURCE LIBRARY" />
-      
-      <div className="mb-12">
+
+      <div className="mb-8">
         <h1 className="page-title text-4xl md:text-6xl font-display font-bold mb-4 gsap-hidden">Resources</h1>
-        <p className="page-subtitle text-xl text-muted-foreground max-w-2xl gsap-hidden">
-          A curated collection of tools, guides, and credits to accelerate your AI journey.
+        <p className="page-subtitle text-lg md:text-xl text-muted-foreground max-w-2xl gsap-hidden">
+          {filteredResources.length} tools, platforms, and resources curated from the shluchim AI community.
         </p>
       </div>
 
-      {/* Search and Filter */}
-      <div className="search-filter-section flex flex-col md:flex-row gap-6 mb-12 gsap-hidden">
-        <div className="relative flex-1 max-w-md">
+      <div className="search-filter-section flex flex-col gap-4 mb-10 gsap-hidden">
+        <div className="relative max-w-md">
           <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
-          <input 
-            type="text" 
-            placeholder="Search resources..." 
+          <input
+            type="text"
+            placeholder="Search tools, categories..."
             value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
+            onChange={(e) => { setSearchQuery(e.target.value); setVisibleCount(PAGE_SIZE); }}
             className="w-full bg-card border-2 border-border rounded-xl pl-12 pr-4 py-3 focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all text-foreground placeholder:text-muted-foreground"
           />
         </div>
-        
+
         <div className="flex flex-wrap gap-2 items-center">
-          {filters.map((filter) => (
+          {categories.map((filter) => (
             <button
               key={filter}
-              onClick={() => setActiveFilter(filter)}
-              className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
-                activeFilter === filter 
-                  ? "bg-primary text-primary-foreground shadow-lg shadow-primary/20" 
+              onClick={() => { setActiveFilter(filter); setVisibleCount(PAGE_SIZE); }}
+              className={`px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all ${
+                activeFilter === filter
+                  ? "bg-primary text-primary-foreground shadow-lg shadow-primary/20"
                   : "bg-secondary text-muted-foreground hover:bg-secondary/80 hover:text-foreground"
               }`}
             >
@@ -110,11 +116,10 @@ export default function Resources() {
         </div>
       </div>
 
-      {/* Grid */}
       {filteredResources.length === 0 ? (
         <div className="text-center py-24 bg-card/50 rounded-3xl border border-border border-dashed">
           <p className="text-xl text-muted-foreground">No resources found matching your search.</p>
-          <button 
+          <button
             onClick={() => { setSearchQuery(""); setActiveFilter("All"); }}
             className="mt-4 text-primary hover:underline"
           >
@@ -122,47 +127,66 @@ export default function Resources() {
           </button>
         </div>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <AnimatePresence>
-            {filteredResources.map((resource) => (
-              <motion.div
-                layout
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.2 }}
-                key={resource.id}
-                className="resource-card bg-transparent border border-border rounded-2xl p-6 flex flex-col transition-all duration-300 group card-futuristic"
+        <>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <AnimatePresence>
+              {visibleResources.map((resource) => (
+                <motion.a
+                  layout
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.95 }}
+                  transition={{ duration: 0.2 }}
+                  key={resource.id}
+                  href={resource.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="resource-card bg-transparent border border-border rounded-2xl p-5 flex flex-col transition-all duration-300 group card-futuristic hover:border-primary/40"
+                >
+                  <div className="flex items-center justify-between mb-3">
+                    <CategoryBadge category={resource.category} />
+                    <TypeBadge type={resource.type} />
+                  </div>
+
+                  <h3 className="text-lg font-display font-bold mb-2 group-hover:text-primary transition-colors line-clamp-1">
+                    {resource.title}
+                  </h3>
+
+                  {resource.description && (
+                    <p className="text-muted-foreground mb-4 line-clamp-2 text-sm flex-1">
+                      {resource.description}
+                    </p>
+                  )}
+
+                  <div className="mt-auto flex items-center justify-between pt-3 border-t border-border/50">
+                    {resource.mentionCount > 0 ? (
+                      <span className="text-xs text-muted-foreground font-mono">
+                        {resource.mentionCount} mentions
+                      </span>
+                    ) : (
+                      <span />
+                    )}
+                    <span className="flex items-center gap-1.5 text-sm font-bold text-foreground group-hover:text-primary transition-colors">
+                      Visit
+                      <ExternalLink className="w-3.5 h-3.5" />
+                    </span>
+                  </div>
+                </motion.a>
+              ))}
+            </AnimatePresence>
+          </div>
+
+          {hasMore && (
+            <div className="flex justify-center mt-10">
+              <button
+                onClick={() => setVisibleCount((c) => c + PAGE_SIZE)}
+                className="px-8 py-3 rounded-xl bg-primary/10 border border-primary/30 text-primary font-bold hover:bg-primary/20 transition-all"
               >
-                <div className="mb-4">
-                  <CategoryBadge category={resource.category as Category} />
-                </div>
-                
-                <h3 className="text-xl font-display font-bold mb-3 group-hover:text-primary transition-colors">
-                  {resource.title}
-                </h3>
-                
-                <p className="text-muted-foreground mb-6 line-clamp-3 text-sm flex-1">
-                  {resource.description}
-                </p>
-                
-                <div className="mt-auto flex items-center justify-between pt-4 border-t border-border/50">
-                  <DifficultyBadge level={resource.difficulty as Difficulty} />
-                  
-                  <a 
-                    href={resource.url} 
-                    target={resource.url.startsWith('http') ? "_blank" : "_self"} 
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-1.5 text-sm font-bold text-foreground hover:text-primary transition-colors"
-                  >
-                    Visit
-                    <ExternalLink className="w-4 h-4" />
-                  </a>
-                </div>
-              </motion.div>
-            ))}
-          </AnimatePresence>
-        </div>
+                Load More ({filteredResources.length - visibleCount} remaining)
+              </button>
+            </div>
+          )}
+        </>
       )}
     </div>
   );

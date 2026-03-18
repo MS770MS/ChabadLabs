@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Heart } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "./ui/button";
 import { AnimatePresence, motion } from "framer-motion";
@@ -92,10 +92,11 @@ export function Navbar() {
           </nav>
 
           {/* CTA & Mobile Toggle */}
-          <div className="flex items-center gap-4">
-            <Button variant="outline" className="nav-cta hidden md:inline-flex gsap-hidden" asChild>
-              <a href="https://github.com/nanoclaw/nanoclaw" target="_blank" rel="noopener noreferrer">
-                Join Community &rarr;
+          <div className="flex items-center gap-3">
+            <Button variant="outline" className="nav-cta hidden md:inline-flex gsap-hidden border-primary/30 hover:border-primary/80 hover:bg-primary/10" asChild>
+              <a href="https://ko-fi.com/tenpr" target="_blank" rel="noopener noreferrer">
+                <Heart className="w-4 h-4 mr-1.5 text-primary" />
+                Support
               </a>
             </Button>
             
@@ -144,10 +145,11 @@ export function Navbar() {
                   {link.label}
                 </Link>
               ))}
-              <div className="mt-8 w-full max-w-xs">
-                <Button className="w-full" size="lg" asChild>
-                  <a href="https://github.com/nanoclaw/nanoclaw" target="_blank" rel="noopener noreferrer">
-                    Join Community &rarr;
+              <div className="mt-8 w-full max-w-xs flex flex-col gap-3">
+                <Button className="w-full" size="lg" variant="outline" asChild>
+                  <a href="https://ko-fi.com/tenpr" target="_blank" rel="noopener noreferrer">
+                    <Heart className="w-5 h-5 mr-2 text-primary" />
+                    Support the Team
                   </a>
                 </Button>
               </div>

@@ -1,14 +1,2652 @@
 [
-  { "id": 1, "title": "DigitalOcean Nonprofit Credits", "description": "Free $2,000/year cloud computing credits for registered nonprofits. Perfect for hosting your Nanoclaw instance.", "category": "Cloud Credits", "difficulty": "Beginner", "url": "https://www.digitalocean.com/impact/nonprofits" },
-  { "id": 2, "title": "Microsoft Azure Nonprofit", "description": "Up to $2,000 in annual Azure credits for qualified nonprofits. Requires application and verification.", "category": "Cloud Credits", "difficulty": "Beginner", "url": "https://nonprofit.microsoft.com" },
-  { "id": 3, "title": "Azure Free Trial", "description": "Instant $200 credit for 30 days — no nonprofit status needed. Great for testing your first VPS.", "category": "Cloud Credits", "difficulty": "Beginner", "url": "https://azure.microsoft.com/free" },
-  { "id": 4, "title": "Claude by Anthropic", "description": "The recommended AI model for ChabadLabs. Powerful reasoning, excellent at coding, and built with safety in mind.", "category": "AI Tools", "difficulty": "Beginner", "url": "https://claude.ai" },
-  { "id": 5, "title": "Nanoclaw", "description": "Secure sandboxed AI agent platform. Each chat runs in its own Docker container — no data leaks, no prompt injection.", "category": "AI Tools", "difficulty": "Intermediate", "url": "https://github.com/nanoclaw/nanoclaw" },
-  { "id": 6, "title": "AccuFlow", "description": "Task and calendar management that integrates beautifully with your Nanoclaw AI assistant for daily summaries.", "category": "AI Tools", "difficulty": "Intermediate", "url": "https://accuflow.com" },
-  { "id": 7, "title": "Claude Code", "description": "Anthropic's command-line AI coding assistant. Build and deploy from your terminal with natural language.", "category": "AI Tools", "difficulty": "Intermediate", "url": "https://docs.anthropic.com/en/docs/claude-code" },
-  { "id": 8, "title": "TailScale", "description": "Free secure VPN connecting your machines. Essential for safe remote access to your VPS. Free for personal use.", "category": "Security", "difficulty": "Beginner", "url": "https://tailscale.com" },
-  { "id": 9, "title": "What is Claude? A Beginner's Guide", "description": "Plain-language introduction to AI for shluchim who are just getting started. No technical background needed.", "category": "Getting Started", "difficulty": "Beginner", "url": "#" },
-  { "id": 10, "title": "Prompt Engineering Basics", "description": "How to communicate with AI effectively. Patterns, examples, and templates for shluchim.", "category": "Best Practices", "difficulty": "Beginner", "url": "#" },
-  { "id": 11, "title": "Building Your First Nanoclaw Skill", "description": "Step-by-step guide to creating a custom AI skill. From concept to deployment on your instance.", "category": "Best Practices", "difficulty": "Intermediate", "url": "#" },
-  { "id": 12, "title": "VPS Security Essentials", "description": "SSH keys, firewalls, fail2ban, and TailScale. Lock down your server before deploying anything.", "category": "Security", "difficulty": "Intermediate", "url": "#" }
+  {
+    "id": 1,
+    "title": "Claude",
+    "description": "Main platform or ecosystem mentioned in the chat.",
+    "category": "AI Assistants",
+    "type": "Platform",
+    "url": "https://claude.ai/public/artifacts/c0fcbf8e-e83c-4cd5-bd99-48199930bf85",
+    "mentionCount": 139,
+    "timesShared": 0
+  },
+  {
+    "id": 2,
+    "title": "Perplexity",
+    "description": "Good for finding answers, sources, or summaries quickly.",
+    "category": "Research & Search",
+    "type": "Platform",
+    "url": "https://www.perplexity.ai/comet",
+    "mentionCount": 34,
+    "timesShared": 0
+  },
+  {
+    "id": 3,
+    "title": "NotebookLM",
+    "description": "Good for finding answers, sources, or summaries quickly.",
+    "category": "Research & Search",
+    "type": "Tool",
+    "url": "https://notebooklm.google.com/notebook/8fd6b863-f304-4710-89fe-b080ddad1eef",
+    "mentionCount": 34,
+    "timesShared": 0
+  },
+  {
+    "id": 4,
+    "title": "OpenAI",
+    "description": "Mentioned in the chat.",
+    "category": "AI Assistants",
+    "type": "Platform",
+    "url": "https://openai.com/index/chatgpt-for-teachers/",
+    "mentionCount": 22,
+    "timesShared": 0
+  },
+  {
+    "id": 5,
+    "title": "Gamma",
+    "description": "Practical software or service shared in the chat.",
+    "category": "Design & Media",
+    "type": "Tool",
+    "url": "https://gamma.app/",
+    "mentionCount": 14,
+    "timesShared": 0
+  },
+  {
+    "id": 6,
+    "title": "ElevenLabs",
+    "description": "Helpful for transcribing, cleaning, voicing, or repurposing audio.",
+    "category": "Audio & Transcription",
+    "type": "Tool",
+    "url": "https://11labs-ai.com/11elevenlabs-speech-to-text/",
+    "mentionCount": 10,
+    "timesShared": 0
+  },
+  {
+    "id": 7,
+    "title": "Google AI Studio",
+    "description": "Useful for building apps, sites, or automations with AI help.",
+    "category": "Coding & Apps",
+    "type": "Tool",
+    "url": "https://aistudio.google.com/",
+    "mentionCount": 9,
+    "timesShared": 0
+  },
+  {
+    "id": 8,
+    "title": "Manus",
+    "description": "Practical software or service shared in the chat.",
+    "category": "AI Assistants",
+    "type": "Tool",
+    "url": "https://manus.im/invitation/K0TGDPJ7OIFCWG",
+    "mentionCount": 9,
+    "timesShared": 0
+  },
+  {
+    "id": 9,
+    "title": "Anthropic",
+    "description": "Mentioned in the chat.",
+    "category": "AI Assistants",
+    "type": "Platform",
+    "url": "https://www.anthropic.com/news/claude-for-nonprofits",
+    "mentionCount": 7,
+    "timesShared": 0
+  },
+  {
+    "id": 10,
+    "title": "Monday.com",
+    "description": "Practical software or service shared in the chat.",
+    "category": "Productivity",
+    "type": "Tool",
+    "url": "https://monday.com/nonprofits",
+    "mentionCount": 6,
+    "timesShared": 0
+  },
+  {
+    "id": 11,
+    "title": "Replicate",
+    "description": "Useful for building apps, sites, or automations with AI help.",
+    "category": "Coding & Apps",
+    "type": "Platform",
+    "url": "https://replicate.com/openai/whisper",
+    "mentionCount": 5,
+    "timesShared": 0
+  },
+  {
+    "id": 12,
+    "title": "Suno",
+    "description": "Helpful for transcribing, cleaning, voicing, or repurposing audio.",
+    "category": "Audio & Transcription",
+    "type": "Tool",
+    "url": "https://suno.com/s/I7xyNs64pH9s2m7E",
+    "mentionCount": 4,
+    "timesShared": 0
+  },
+  {
+    "id": 13,
+    "title": "Join a focused group of shluchim discovering how to maximize AI in our shlichus.",
+    "description": "Shared as a Jewish, Torah, or shlichus-oriented resource.",
+    "category": "Jewish & Shlichus",
+    "type": "Resource",
+    "url": "https://chat.whatsapp.com/C4wJyZaOlu5ACniRX9DCLH?mode=ac_t",
+    "mentionCount": 0,
+    "timesShared": 4
+  },
+  {
+    "id": 14,
+    "title": "LearningTanach",
+    "description": "Shared as a Jewish, Torah, or shlichus-oriented resource.",
+    "category": "Jewish & Shlichus",
+    "type": "Resource",
+    "url": "https://learningtanach.org/esther/reader?autostart=true",
+    "mentionCount": 4,
+    "timesShared": 0
+  },
+  {
+    "id": 15,
+    "title": "fal.ai",
+    "description": "Useful for building apps, sites, or automations with AI help.",
+    "category": "Coding & Apps",
+    "type": "Platform",
+    "url": "https://fal.ai/",
+    "mentionCount": 3,
+    "timesShared": 0
+  },
+  {
+    "id": 16,
+    "title": "Anyone used Gamma or similar tools for design and had good results?",
+    "description": "Practical software or service shared in the chat.",
+    "category": "Design & Media",
+    "type": "Tool",
+    "url": "https://gamma.app/",
+    "mentionCount": 0,
+    "timesShared": 3
+  },
+  {
+    "id": 17,
+    "title": "Form",
+    "description": "Shared as a Jewish, Torah, or shlichus-oriented resource.",
+    "category": "Jewish & Shlichus",
+    "type": "Resource",
+    "url": "https://forms.gle/3Z8KCntdwPNFmqAC6",
+    "mentionCount": 0,
+    "timesShared": 3
+  },
+  {
+    "id": 18,
+    "title": "Granola",
+    "description": "Practical software or service shared in the chat.",
+    "category": "Productivity",
+    "type": "Tool",
+    "url": "https://go.granola.ai/node8",
+    "mentionCount": 3,
+    "timesShared": 0
+  },
+  {
+    "id": 19,
+    "title": "Speechify",
+    "description": "Helpful for transcribing, cleaning, voicing, or repurposing audio.",
+    "category": "Audio & Transcription",
+    "type": "Tool",
+    "url": "https://app.speechify.com/",
+    "mentionCount": 0,
+    "timesShared": 2
+  },
+  {
+    "id": 20,
+    "title": "Those who made this may also may have it as plain text...",
+    "description": "Useful for building apps, sites, or automations with AI help.",
+    "category": "Coding & Apps",
+    "type": "Resource",
+    "url": "https://anash.org/new-likutei-sichos-app-will-help-you-locate-and-learn/",
+    "mentionCount": 0,
+    "timesShared": 2
+  },
+  {
+    "id": 21,
+    "title": "Nominatim",
+    "description": "Useful for building apps, sites, or automations with AI help.",
+    "category": "Coding & Apps",
+    "type": "Resource",
+    "url": "https://nominatim.org",
+    "mentionCount": 2,
+    "timesShared": 0
+  },
+  {
+    "id": 22,
+    "title": "Docker",
+    "description": "Useful for building apps, sites, or automations with AI help.",
+    "category": "Coding & Apps",
+    "type": "Platform",
+    "url": "https://www.docker.com/blog/nanoclaw-docker-sandboxes-agent-security/",
+    "mentionCount": 2,
+    "timesShared": 0
+  },
+  {
+    "id": 23,
+    "title": "Ok it is fixed now, usable for next year:) still cleaning up little stuff.",
+    "description": "Practical software or service shared in the chat.",
+    "category": "General",
+    "type": "Tool",
+    "url": "https://learningtanach.org/esther/reader?autostart=true",
+    "mentionCount": 0,
+    "timesShared": 2
+  },
+  {
+    "id": 24,
+    "title": "ShluchimExchange prompt",
+    "description": "Practical software or service shared in the chat.",
+    "category": "General",
+    "type": "Tool",
+    "url": "https://www.shluchimexchange.ai/prompts/28cbafa6-f2e4-4c18-b072-7ccd8f5282f4",
+    "mentionCount": 0,
+    "timesShared": 2
+  },
+  {
+    "id": 25,
+    "title": "Sofer",
+    "description": "Practical software or service shared in the chat.",
+    "category": "General",
+    "type": "Tool",
+    "url": "https://www.sofer.ai",
+    "mentionCount": 0,
+    "timesShared": 2
+  },
+  {
+    "id": 26,
+    "title": "Taste",
+    "description": "Practical software or service shared in the chat.",
+    "category": "General",
+    "type": "Tool",
+    "url": "https://berel.me/taste",
+    "mentionCount": 0,
+    "timesShared": 2
+  },
+  {
+    "id": 27,
+    "title": "K0tgdpj7oifcwg",
+    "description": "Reference shared in the chat for learning, inspiration, or practical use.",
+    "category": "AI Assistants",
+    "type": "Resource",
+    "url": "https://manus.im/invitation/K0TGDPJ7OIFCWG",
+    "mentionCount": 0,
+    "timesShared": 2
+  },
+  {
+    "id": 28,
+    "title": "- L'zchus Reb Tucker Carlson (built with AI)",
+    "description": "Shared as a Jewish, Torah, or shlichus-oriented resource.",
+    "category": "Jewish & Shlichus",
+    "type": "Tool",
+    "url": "https://www.mikdash.live",
+    "mentionCount": 0,
+    "timesShared": 2
+  },
+  {
+    "id": 29,
+    "title": "Rashi Roots Map",
+    "description": "Shared as a Jewish, Torah, or shlichus-oriented resource.",
+    "category": "Jewish & Shlichus",
+    "type": "Tool",
+    "url": "https://rashi-roots-map.lovable.app",
+    "mentionCount": 0,
+    "timesShared": 2
+  },
+  {
+    "id": 30,
+    "title": "Center",
+    "description": "Good for finding answers, sources, or summaries quickly.",
+    "category": "Research & Search",
+    "type": "Resource",
+    "url": "https://www.facebook.com/privacy/center/",
+    "mentionCount": 0,
+    "timesShared": 2
+  },
+  {
+    "id": 31,
+    "title": "Link",
+    "description": "Good for finding answers, sources, or summaries quickly.",
+    "category": "Research & Search",
+    "type": "Resource",
+    "url": "https://c212.net/c/link/?t=0&l=en&o=4500553-1&h=3895451198&u=https%3A%2F%2Fwww.perplexity.ai%2Fjoin%2Fp%2Fpaypal-subscription&a=landing+page",
+    "mentionCount": 0,
+    "timesShared": 2
+  },
+  {
+    "id": 32,
+    "title": "Clipchamp",
+    "description": "Useful for making, editing, or repackaging videos.",
+    "category": "Video & Media",
+    "type": "Tool",
+    "url": "https://clipchamp.com/en/",
+    "mentionCount": 0,
+    "timesShared": 2
+  },
+  {
+    "id": 33,
+    "title": "Filmora",
+    "description": "Useful for making, editing, or repackaging videos.",
+    "category": "Video & Media",
+    "type": "Tool",
+    "url": "https://filmora.wondershare.com/",
+    "mentionCount": 0,
+    "timesShared": 2
+  },
+  {
+    "id": 34,
+    "title": "Gling",
+    "description": "Useful for making, editing, or repackaging videos.",
+    "category": "Video & Media",
+    "type": "Tool",
+    "url": "https://www.gling.ai/",
+    "mentionCount": 0,
+    "timesShared": 2
+  },
+  {
+    "id": 35,
+    "title": "Pictory",
+    "description": "Useful for making, editing, or repackaging videos.",
+    "category": "Video & Media",
+    "type": "Tool",
+    "url": "https://pictory.ai/",
+    "mentionCount": 0,
+    "timesShared": 2
+  },
+  {
+    "id": 36,
+    "title": "Videoleapapp",
+    "description": "Useful for making, editing, or repackaging videos.",
+    "category": "Video & Media",
+    "type": "Tool",
+    "url": "https://www.videoleapapp.com/",
+    "mentionCount": 0,
+    "timesShared": 2
+  },
+  {
+    "id": 37,
+    "title": "Opus Clip",
+    "description": "Useful for making, editing, or repackaging videos.",
+    "category": "Video & Media",
+    "type": "Tool",
+    "url": "https://www.opus.pro/?via=bdefda",
+    "mentionCount": 2,
+    "timesShared": 0
+  },
+  {
+    "id": 38,
+    "title": "Opus Pro",
+    "description": "Useful for making, editing, or repackaging videos.",
+    "category": "Video & Media",
+    "type": "Tool",
+    "url": "https://www.opus.pro/?via=bdefda",
+    "mentionCount": 2,
+    "timesShared": 0
+  },
+  {
+    "id": 39,
+    "title": "AI Transcribe Handwriting TO Text",
+    "description": "Helpful for transcribing, cleaning, voicing, or repurposing audio.",
+    "category": "Audio & Transcription",
+    "type": "Tool",
+    "url": "https://evernote.com/blog/ai-transcribe-handwriting-to-text",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 40,
+    "title": "Adobe Podcast",
+    "description": "Helpful for transcribing, cleaning, voicing, or repurposing audio.",
+    "category": "Audio & Transcription",
+    "type": "Tool",
+    "url": "https://podcast.adobe.com/en",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 41,
+    "title": "Basic Pitch",
+    "description": "Helpful for transcribing, cleaning, voicing, or repurposing audio.",
+    "category": "Audio & Transcription",
+    "type": "Tool",
+    "url": "https://basicpitch.spotify.com",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 42,
+    "title": "Castmagic",
+    "description": "Helpful for transcribing, cleaning, voicing, or repurposing audio.",
+    "category": "Audio & Transcription",
+    "type": "Tool",
+    "url": "https://www.castmagic.io/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 43,
+    "title": "Descript",
+    "description": "Helpful for transcribing, cleaning, voicing, or repurposing audio.",
+    "category": "Audio & Transcription",
+    "type": "Tool",
+    "url": "https://web.descript.com/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 44,
+    "title": "Elevenlabs Speech TO Text",
+    "description": "Helpful for transcribing, cleaning, voicing, or repurposing audio.",
+    "category": "Audio & Transcription",
+    "type": "Tool",
+    "url": "https://11labs-ai.com/11elevenlabs-speech-to-text/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 45,
+    "title": "Enhance",
+    "description": "Helpful for transcribing, cleaning, voicing, or repurposing audio.",
+    "category": "Audio & Transcription",
+    "type": "Tool",
+    "url": "https://podcast.adobe.com/en/enhance",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 46,
+    "title": "Fireflies",
+    "description": "Helpful for transcribing, cleaning, voicing, or repurposing audio.",
+    "category": "Audio & Transcription",
+    "type": "Tool",
+    "url": "https://fireflies.ai",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 47,
+    "title": "For Mac users Great platform and UI for heavy transcription users",
+    "description": "Helpful for transcribing, cleaning, voicing, or repurposing audio.",
+    "category": "Audio & Transcription",
+    "type": "Tool",
+    "url": "https://track.gumroad.com/CL0/https:%2F%2Fgoodsnooze.gumroad.com%2Fl%2Fmacwhisper%2Fbff2025e/2/0100019ac6503544-f4f719b1-cc26-40ef-ab73-099b64de2f0a-000000/7sH6ESGSPl7yUwALdOFIweHrNKg-5ZBwi0Bt5KrtsfE=433",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 48,
+    "title": "Getrssfeed",
+    "description": "Helpful for transcribing, cleaning, voicing, or repurposing audio.",
+    "category": "Audio & Transcription",
+    "type": "Tool",
+    "url": "https://getrssfeed.com/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 49,
+    "title": "Join",
+    "description": "Helpful for transcribing, cleaning, voicing, or repurposing audio.",
+    "category": "Audio & Transcription",
+    "type": "Tool",
+    "url": "https://moises.app/join",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 50,
+    "title": "Meir",
+    "description": "Helpful for transcribing, cleaning, voicing, or repurposing audio.",
+    "category": "Audio & Transcription",
+    "type": "Tool",
+    "url": "https://try.elevenlabs.io/meir",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 51,
+    "title": "Musescore",
+    "description": "Helpful for transcribing, cleaning, voicing, or repurposing audio.",
+    "category": "Audio & Transcription",
+    "type": "Tool",
+    "url": "https://musescore.org",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 52,
+    "title": "Speech TO Text",
+    "description": "Helpful for transcribing, cleaning, voicing, or repurposing audio.",
+    "category": "Audio & Transcription",
+    "type": "Tool",
+    "url": "https://elevenlabs.io/speech-to-text",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 53,
+    "title": "Swellai",
+    "description": "Helpful for transcribing, cleaning, voicing, or repurposing audio.",
+    "category": "Audio & Transcription",
+    "type": "Tool",
+    "url": "https://www.swellai.com/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 54,
+    "title": "Text TO Speech",
+    "description": "Helpful for transcribing, cleaning, voicing, or repurposing audio.",
+    "category": "Audio & Transcription",
+    "type": "Tool",
+    "url": "https://11labs-ai.com/text-to-speech/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 55,
+    "title": "Typeless",
+    "description": "Helpful for transcribing, cleaning, voicing, or repurposing audio.",
+    "category": "Audio & Transcription",
+    "type": "Tool",
+    "url": "https://www.typeless.com",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 56,
+    "title": "Voice Cloning",
+    "description": "Helpful for transcribing, cleaning, voicing, or repurposing audio.",
+    "category": "Audio & Transcription",
+    "type": "Tool",
+    "url": "https://elevenlabs.io/voice-cloning",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 57,
+    "title": "Whisper",
+    "description": "Helpful for transcribing, cleaning, voicing, or repurposing audio.",
+    "category": "Audio & Transcription",
+    "type": "Tool",
+    "url": "https://replicate.com/openai/whisper",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 58,
+    "title": "the best one in Hebrew. and still free.",
+    "description": "Helpful for transcribing, cleaning, voicing, or repurposing audio.",
+    "category": "Audio & Transcription",
+    "type": "Tool",
+    "url": "https://transcribe.ivrit.ai/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 59,
+    "title": "Moises",
+    "description": "Helpful for transcribing, cleaning, voicing, or repurposing audio.",
+    "category": "Audio & Transcription",
+    "type": "Tool",
+    "url": "https://moises.app/join",
+    "mentionCount": 1,
+    "timesShared": 0
+  },
+  {
+    "id": 60,
+    "title": "And here’s a Notebook with the transcript of this WhatsApp group",
+    "description": "Useful for building apps, sites, or automations with AI help.",
+    "category": "Coding & Apps",
+    "type": "Resource",
+    "url": "https://notebooklm.google.com/notebook/4a2c1656-c37f-4f77-bb5e-691f0768e994",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 61,
+    "title": "Descalo",
+    "description": "Useful for building apps, sites, or automations with AI help.",
+    "category": "Coding & Apps",
+    "type": "Resource",
+    "url": "https://www.linkedin.com/in/descalo/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 62,
+    "title": "Google Drive file/folder",
+    "description": "Useful for building apps, sites, or automations with AI help.",
+    "category": "Coding & Apps",
+    "type": "Resource",
+    "url": "https://drive.google.com/file/d/1wOXsut-AeYHSr8okBVkhBJwg8xzdY3Rq/view?usp=drive_link",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 63,
+    "title": "It's not very active yet, but if enough shluchos are interested it can be.",
+    "description": "Useful for building apps, sites, or automations with AI help.",
+    "category": "Coding & Apps",
+    "type": "Resource",
+    "url": "https://chat.whatsapp.com/BRNCU61TsXT9BJI3pYexRd?mode=gi_t",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 64,
+    "title": "Output4",
+    "description": "Useful for building apps, sites, or automations with AI help.",
+    "category": "Coding & Apps",
+    "type": "Resource",
+    "url": "https://github.com/rayistern/whimpizer/blob/main/output4.pdf",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 65,
+    "title": "WhatsApp group invite",
+    "description": "Useful for building apps, sites, or automations with AI help.",
+    "category": "Coding & Apps",
+    "type": "Resource",
+    "url": "https://chat.whatsapp.com/EzgjQYEbC1KKoa0S5rUlsn",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 66,
+    "title": "Whimpizer",
+    "description": "Useful for building apps, sites, or automations with AI help.",
+    "category": "Coding & Apps",
+    "type": "Resource",
+    "url": "https://github.com/rayistern/whimpizer",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 67,
+    "title": "3D Pushka demo",
+    "description": "Useful for building apps, sites, or automations with AI help.",
+    "category": "Coding & Apps",
+    "type": "Tool",
+    "url": "https://berel.me/pushkapp/gemini3/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 68,
+    "title": "Already exists i think",
+    "description": "Useful for building apps, sites, or automations with AI help.",
+    "category": "Coding & Apps",
+    "type": "Tool",
+    "url": "https://play.google.com/store/apps/details?id=com.mendys",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 69,
+    "title": "And actually, tomorrow Replit has a demo on this",
+    "description": "Useful for building apps, sites, or automations with AI help.",
+    "category": "Coding & Apps",
+    "type": "Tool",
+    "url": "https://luma.com/lzyf3g8i",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 70,
+    "title": "Berel donation page",
+    "description": "Useful for building apps, sites, or automations with AI help.",
+    "category": "Coding & Apps",
+    "type": "Tool",
+    "url": "https://berel.me/donate",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 71,
+    "title": "Bookofesther",
+    "description": "Useful for building apps, sites, or automations with AI help.",
+    "category": "Coding & Apps",
+    "type": "Tool",
+    "url": "https://bookofesther.lovable.app",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 72,
+    "title": "Claude share",
+    "description": "Useful for building apps, sites, or automations with AI help.",
+    "category": "Coding & Apps",
+    "type": "Tool",
+    "url": "https://claude.ai/referral/f1P06YA4Gw",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 73,
+    "title": "Cypcampaign",
+    "description": "Useful for building apps, sites, or automations with AI help.",
+    "category": "Coding & Apps",
+    "type": "Tool",
+    "url": "https://cypcampaign.lovable.app/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 74,
+    "title": "Dont Trust AI Agents Says Nanoclaw Now Fully Integrated With Docker",
+    "description": "Useful for building apps, sites, or automations with AI help.",
+    "category": "Coding & Apps",
+    "type": "Tool",
+    "url": "https://www.forbes.com/sites/gilpress/2026/03/13/dont-trust-ai-agents-says-nanoclaw-now-fully-integrated-with-docker/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 75,
+    "title": "Github Copilot VS Chatgpt Best AI Tool For Developers",
+    "description": "Useful for building apps, sites, or automations with AI help.",
+    "category": "Coding & Apps",
+    "type": "Tool",
+    "url": "https://www.kommunicate.io/blog/github-copilot-vs-chatgpt-best-ai-tool-for-developers/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 76,
+    "title": "Goodstack",
+    "description": "Useful for building apps, sites, or automations with AI help.",
+    "category": "Coding & Apps",
+    "type": "Tool",
+    "url": "https://help.goodstack.org/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 77,
+    "title": "Google Play app listing",
+    "description": "Useful for building apps, sites, or automations with AI help.",
+    "category": "Coding & Apps",
+    "type": "Tool",
+    "url": "https://play.google.com/store/apps/details?id=com.ktix007.talk",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 78,
+    "title": "Has some good options",
+    "description": "Useful for building apps, sites, or automations with AI help.",
+    "category": "Coding & Apps",
+    "type": "Tool",
+    "url": "https://fal.ai/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 79,
+    "title": "It's my birthday tonight. You can send me a gift!",
+    "description": "Useful for building apps, sites, or automations with AI help.",
+    "category": "Coding & Apps",
+    "type": "Tool",
+    "url": "https://happybirthday.berel.me/gift",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 80,
+    "title": "Julius",
+    "description": "Useful for building apps, sites, or automations with AI help.",
+    "category": "Coding & Apps",
+    "type": "Tool",
+    "url": "https://julius.ai",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 81,
+    "title": "Kiddushhachodesh",
+    "description": "Useful for building apps, sites, or automations with AI help.",
+    "category": "Coding & Apps",
+    "type": "Tool",
+    "url": "https://kiddushhachodesh.lovable.app",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 82,
+    "title": "Lovable",
+    "description": "Useful for building apps, sites, or automations with AI help.",
+    "category": "Coding & Apps",
+    "type": "Tool",
+    "url": "https://lovable.dev/#via=meir",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 83,
+    "title": "MY Charity Box",
+    "description": "Useful for building apps, sites, or automations with AI help.",
+    "category": "Coding & Apps",
+    "type": "Tool",
+    "url": "https://my-charity-box.lovable.app",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 84,
+    "title": "Manotmatch",
+    "description": "Useful for building apps, sites, or automations with AI help.",
+    "category": "Coding & Apps",
+    "type": "Tool",
+    "url": "https://manotmatch.base44.app/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 85,
+    "title": "Mturk",
+    "description": "Useful for building apps, sites, or automations with AI help.",
+    "category": "Coding & Apps",
+    "type": "Tool",
+    "url": "https://www.mturk.com",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 86,
+    "title": "Nanoclaw Docker Sandboxes Agent Security",
+    "description": "Useful for building apps, sites, or automations with AI help.",
+    "category": "Coding & Apps",
+    "type": "Tool",
+    "url": "https://www.docker.com/blog/nanoclaw-docker-sandboxes-agent-security/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 87,
+    "title": "Ourshul",
+    "description": "Useful for building apps, sites, or automations with AI help.",
+    "category": "Coding & Apps",
+    "type": "Tool",
+    "url": "https://www.ourshul.org/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 88,
+    "title": "Preview Sms Invite Joy",
+    "description": "Useful for building apps, sites, or automations with AI help.",
+    "category": "Coding & Apps",
+    "type": "Tool",
+    "url": "https://preview--sms-invite-joy.lovable.app/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 89,
+    "title": "Search",
+    "description": "Useful for building apps, sites, or automations with AI help.",
+    "category": "Coding & Apps",
+    "type": "Tool",
+    "url": "https://www.google.com/search?q=whatsapp+business+api+client",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 90,
+    "title": "Shabbos",
+    "description": "Useful for building apps, sites, or automations with AI help.",
+    "category": "Coding & Apps",
+    "type": "Tool",
+    "url": "https://shabbos.lovable.app",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 91,
+    "title": "SimplerStory story",
+    "description": "Useful for building apps, sites, or automations with AI help.",
+    "category": "Coding & Apps",
+    "type": "Tool",
+    "url": "https://app.simplerstory.com/story/IOfI6zn9O",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 92,
+    "title": "Tenpr",
+    "description": "Useful for building apps, sites, or automations with AI help.",
+    "category": "Coding & Apps",
+    "type": "Tool",
+    "url": "https://tenpr.app",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 93,
+    "title": "Tr9m3e5",
+    "description": "Useful for building apps, sites, or automations with AI help.",
+    "category": "Coding & Apps",
+    "type": "Tool",
+    "url": "https://lovable.dev/invite/TR9M3E5",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 94,
+    "title": "Tsedaka Beth Loubavitch Paris 20",
+    "description": "Useful for building apps, sites, or automations with AI help.",
+    "category": "Coding & Apps",
+    "type": "Tool",
+    "url": "https://chalomatlan-png.github.io/Tsedaka-Beth-Loubavitch-Paris-20/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 95,
+    "title": "Tzivoshashem",
+    "description": "Useful for building apps, sites, or automations with AI help.",
+    "category": "Coding & Apps",
+    "type": "Tool",
+    "url": "https://tzivoshashem.lovable.app",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 96,
+    "title": "Websets",
+    "description": "Useful for building apps, sites, or automations with AI help.",
+    "category": "Coding & Apps",
+    "type": "Tool",
+    "url": "https://websets.exa.ai/websets/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 97,
+    "title": "WhatsApp",
+    "description": "Useful for building apps, sites, or automations with AI help.",
+    "category": "Coding & Apps",
+    "type": "Tool",
+    "url": "https://wa.me/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 98,
+    "title": "don't forget to update your system prompt for the 5.2 model on gpt",
+    "description": "Useful for building apps, sites, or automations with AI help.",
+    "category": "Coding & Apps",
+    "type": "Tool",
+    "url": "https://cookbook.openai.com/examples/gpt-5/gpt-5-2_prompting_guide",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 99,
+    "title": "shadcn/ui",
+    "description": "Useful for building apps, sites, or automations with AI help.",
+    "category": "Coding & Apps",
+    "type": "Tool",
+    "url": "https://ui.shadcn.com/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 100,
+    "title": "OpenModelDB",
+    "description": "Useful for building apps, sites, or automations with AI help.",
+    "category": "Coding & Apps",
+    "type": "Resource",
+    "url": "https://openmodeldb.info/",
+    "mentionCount": 1,
+    "timesShared": 0
+  },
+  {
+    "id": 101,
+    "title": "DataBlist",
+    "description": "Useful for building apps, sites, or automations with AI help.",
+    "category": "Coding & Apps",
+    "type": "Tool",
+    "url": "https://www.datablist.com/",
+    "mentionCount": 1,
+    "timesShared": 0
+  },
+  {
+    "id": 102,
+    "title": "Kommunicate",
+    "description": "Useful for building apps, sites, or automations with AI help.",
+    "category": "Coding & Apps",
+    "type": "Tool",
+    "url": "https://www.kommunicate.io/blog/github-copilot-vs-chatgpt-best-ai-tool-for-developers/",
+    "mentionCount": 1,
+    "timesShared": 0
+  },
+  {
+    "id": 103,
+    "title": "SimplerStory",
+    "description": "Useful for building apps, sites, or automations with AI help.",
+    "category": "Coding & Apps",
+    "type": "Tool",
+    "url": "https://app.simplerstory.com/story/IOfI6zn9O",
+    "mentionCount": 1,
+    "timesShared": 0
+  },
+  {
+    "id": 104,
+    "title": "Exa",
+    "description": "Useful for building apps, sites, or automations with AI help.",
+    "category": "Coding & Apps",
+    "type": "Platform",
+    "url": "https://websets.exa.ai/websets/",
+    "mentionCount": 1,
+    "timesShared": 0
+  },
+  {
+    "id": 105,
+    "title": "Unitree",
+    "description": "Useful for building apps, sites, or automations with AI help.",
+    "category": "Coding & Apps",
+    "type": "Tool",
+    "url": "https://www.unitree.com/mobile/g1",
+    "mentionCount": 1,
+    "timesShared": 0
+  },
+  {
+    "id": 106,
+    "title": "Image Batch",
+    "description": "Reference shared in the chat for learning, inspiration, or practical use.",
+    "category": "Design & Media",
+    "type": "Resource",
+    "url": "https://github.com/rayistern/image-batch",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 107,
+    "title": "Nano Banana 2",
+    "description": "Reference shared in the chat for learning, inspiration, or practical use.",
+    "category": "Design & Media",
+    "type": "Resource",
+    "url": "https://blog.google/innovation-and-ai/technology/ai/nano-banana-2/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 108,
+    "title": "Nano Banana AI Templates Ask Photos",
+    "description": "Reference shared in the chat for learning, inspiration, or practical use.",
+    "category": "Design & Media",
+    "type": "Resource",
+    "url": "https://blog.google/products/photos/nano-banana-ai-templates-ask-photos/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 109,
+    "title": "Released today",
+    "description": "Reference shared in the chat for learning, inspiration, or practical use.",
+    "category": "Design & Media",
+    "type": "Resource",
+    "url": "https://blog.google/technology/developers/gemini-3-pro-image-developers/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 110,
+    "title": "Storybook",
+    "description": "Reference shared in the chat for learning, inspiration, or practical use.",
+    "category": "Design & Media",
+    "type": "Resource",
+    "url": "https://gemini.google/overview/storybook/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 111,
+    "title": "Find image upscalers",
+    "description": "Practical software or service shared in the chat.",
+    "category": "Design & Media",
+    "type": "Tool",
+    "url": "https://openmodeldb.info/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 112,
+    "title": "Handwriting TO Text",
+    "description": "Practical software or service shared in the chat.",
+    "category": "Design & Media",
+    "type": "Tool",
+    "url": "https://www.mymap.ai/handwriting-to-text",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 113,
+    "title": "New Chat",
+    "description": "Practical software or service shared in the chat.",
+    "category": "Design & Media",
+    "type": "Tool",
+    "url": "https://aistudio.google.com/prompts/new_chat?model=gemini-2.5-flash-image-preview",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 114,
+    "title": "SlideSpeak",
+    "description": "Practical software or service shared in the chat.",
+    "category": "Design & Media",
+    "type": "Tool",
+    "url": "https://slidespeak.co/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 115,
+    "title": "Try gamma or napkinAI",
+    "description": "Practical software or service shared in the chat.",
+    "category": "Design & Media",
+    "type": "Tool",
+    "url": "https://www.napkin.ai/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 116,
+    "title": "Zmanimgraphics",
+    "description": "Practical software or service shared in the chat.",
+    "category": "Design & Media",
+    "type": "Tool",
+    "url": "https://zmanimgraphics.com",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 117,
+    "title": "Napkin",
+    "description": "Practical software or service shared in the chat.",
+    "category": "Design & Media",
+    "type": "Tool",
+    "url": "https://www.napkin.ai/",
+    "mentionCount": 1,
+    "timesShared": 0
+  },
+  {
+    "id": 118,
+    "title": "AI Training Series Empowers Educators With New Tools",
+    "description": "Reference shared in the chat for learning, inspiration, or practical use.",
+    "category": "General",
+    "type": "Resource",
+    "url": "https://anash.org/ai-training-series-empowers-educators-with-new-tools/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 119,
+    "title": "Abacus.AI - The World's First Super Assistant For Professionals And Enterprises.",
+    "description": "Reference shared in the chat for learning, inspiration, or practical use.",
+    "category": "General",
+    "type": "Resource",
+    "url": "https://share.google/Kqj520jYvNCCInSn5",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 120,
+    "title": "Australian Tech Entrepreneur AI Cancer Vaccine Dog Rosie Unsw Mrna",
+    "description": "Reference shared in the chat for learning, inspiration, or practical use.",
+    "category": "General",
+    "type": "Resource",
+    "url": "https://fortune.com/2026/03/15/australian-tech-entrepreneur-ai-cancer-vaccine-dog-rosie-unsw-mrna/?utm_source=aidailybrief.beehiiv.com&utm_medium=referral&utm_campaign=a-guy-used-ai-to-cure-his-dog-s-cancer",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 121,
+    "title": "Cfym3ralrl4zb928",
+    "description": "Reference shared in the chat for learning, inspiration, or practical use.",
+    "category": "General",
+    "type": "Resource",
+    "url": "https://share.google/aimode/6cFym3rALrl4ZB928",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 122,
+    "title": "Cute",
+    "description": "Reference shared in the chat for learning, inspiration, or practical use.",
+    "category": "General",
+    "type": "Resource",
+    "url": "https://x.com/SecretService/status/2026024572923896043?s=20",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 123,
+    "title": "Efhkh4m1qruyo3al",
+    "description": "Reference shared in the chat for learning, inspiration, or practical use.",
+    "category": "General",
+    "type": "Resource",
+    "url": "https://share.google/5eFhkh4M1QrUYo3AL",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 124,
+    "title": "In other news Helpful perspective on vibe coding",
+    "description": "Reference shared in the chat for learning, inspiration, or practical use.",
+    "category": "General",
+    "type": "Resource",
+    "url": "https://towardsdatascience.com/human-wont-replace-python/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 125,
+    "title": "Recording of yesterday's webinar",
+    "description": "Reference shared in the chat for learning, inspiration, or practical use.",
+    "category": "General",
+    "type": "Resource",
+    "url": "https://youtu.be/f56EGtO0mug",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 126,
+    "title": "Wouldn’t be the first time…",
+    "description": "Reference shared in the chat for learning, inspiration, or practical use.",
+    "category": "General",
+    "type": "Resource",
+    "url": "https://www.businessinsider.com/amazons-just-walk-out-actually-1-000-people-in-india-2024-4",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 127,
+    "title": "X post",
+    "description": "Reference shared in the chat for learning, inspiration, or practical use.",
+    "category": "General",
+    "type": "Resource",
+    "url": "https://x.com/ivanhzhao/status/2003192654545539400",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 128,
+    "title": "AI Rabbi",
+    "description": "Practical software or service shared in the chat.",
+    "category": "General",
+    "type": "Tool",
+    "url": "https://airabbi.org/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 129,
+    "title": "Ashrei Nu Times",
+    "description": "Practical software or service shared in the chat.",
+    "category": "General",
+    "type": "Tool",
+    "url": "https://berel.me/ashreinutimes",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 130,
+    "title": "Beta Program",
+    "description": "Practical software or service shared in the chat.",
+    "category": "General",
+    "type": "Tool",
+    "url": "https://www.sunday.ai/beta-program",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 131,
+    "title": "Boxbrownie",
+    "description": "Practical software or service shared in the chat.",
+    "category": "General",
+    "type": "Tool",
+    "url": "https://www.boxbrownie.com",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 132,
+    "title": "Canary 180m Flash",
+    "description": "Practical software or service shared in the chat.",
+    "category": "General",
+    "type": "Tool",
+    "url": "https://huggingface.co/spaces/Huggingfacest/canary-180m-flash",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 133,
+    "title": "Click",
+    "description": "Practical software or service shared in the chat.",
+    "category": "General",
+    "type": "Tool",
+    "url": "https://charidy.us7.list-manage.com/track/click?u=ae65b2106f3047212cefe2102&id=a226355380&e=caa1338189",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 134,
+    "title": "Dach.dev",
+    "description": "Practical software or service shared in the chat.",
+    "category": "General",
+    "type": "Tool",
+    "url": "https://dach.dev",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 135,
+    "title": "Dach.dev library",
+    "description": "Practical software or service shared in the chat.",
+    "category": "General",
+    "type": "Tool",
+    "url": "https://dach.dev/library/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 136,
+    "title": "Dach.dev meluket page",
+    "description": "Practical software or service shared in the chat.",
+    "category": "General",
+    "type": "Tool",
+    "url": "https://dach.dev/meluket/view/1_%D7%92",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 137,
+    "title": "Ddevi",
+    "description": "Practical software or service shared in the chat.",
+    "category": "General",
+    "type": "Tool",
+    "url": "https://ddevi.com",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 138,
+    "title": "Departments",
+    "description": "Practical software or service shared in the chat.",
+    "category": "General",
+    "type": "Tool",
+    "url": "https://www.aiforwork.co/departments",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 139,
+    "title": "Donatext",
+    "description": "Practical software or service shared in the chat.",
+    "category": "General",
+    "type": "Tool",
+    "url": "https://berel.me/donatext",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 140,
+    "title": "Groggger",
+    "description": "Practical software or service shared in the chat.",
+    "category": "General",
+    "type": "Tool",
+    "url": "https://berel.me/grogger",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 141,
+    "title": "JEM subtitles",
+    "description": "Practical software or service shared in the chat.",
+    "category": "General",
+    "type": "Tool",
+    "url": "https://berel.me/jemsubtitles/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 142,
+    "title": "JEM subtitles bookmarklet",
+    "description": "Practical software or service shared in the chat.",
+    "category": "General",
+    "type": "Tool",
+    "url": "https://berel.me/jemsubtitles/bookmarklet.php",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 143,
+    "title": "Kapwing",
+    "description": "Practical software or service shared in the chat.",
+    "category": "General",
+    "type": "Tool",
+    "url": "https://www.kapwing.com/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 144,
+    "title": "Likuteysichos",
+    "description": "Practical software or service shared in the chat.",
+    "category": "General",
+    "type": "Tool",
+    "url": "https://www.likuteysichos.com",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 145,
+    "title": "Maayan",
+    "description": "Practical software or service shared in the chat.",
+    "category": "General",
+    "type": "Tool",
+    "url": "https://berel.me/מעיין",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 146,
+    "title": "Nvidia is working on it",
+    "description": "Practical software or service shared in the chat.",
+    "category": "General",
+    "type": "Tool",
+    "url": "https://huggingface.co/collections/nvidia/canary",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 147,
+    "title": "Odkppapkljenohbgpmmccdlakekjkmji",
+    "description": "Practical software or service shared in the chat.",
+    "category": "General",
+    "type": "Tool",
+    "url": "https://chromewebstore.google.com/detail/group-scraper-for-fb/odkppapkljenohbgpmmccdlakekjkmji?pli=1",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 148,
+    "title": "Opus",
+    "description": "Practical software or service shared in the chat.",
+    "category": "General",
+    "type": "Tool",
+    "url": "https://www.opus.pro/?via=bdefda",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 149,
+    "title": "PDF label tool",
+    "description": "Practical software or service shared in the chat.",
+    "category": "General",
+    "type": "Tool",
+    "url": "https://berel.me/pdflabel",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 150,
+    "title": "Playground",
+    "description": "Practical software or service shared in the chat.",
+    "category": "General",
+    "type": "Tool",
+    "url": "https://ai-sdk.dev/playground",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 151,
+    "title": "Rabbi",
+    "description": "Practical software or service shared in the chat.",
+    "category": "General",
+    "type": "Tool",
+    "url": "https://www.aiforwork.co/role/rabbi",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 152,
+    "title": "Raffle tool",
+    "description": "Practical software or service shared in the chat.",
+    "category": "General",
+    "type": "Tool",
+    "url": "https://berel.me/raffle",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 153,
+    "title": "Rocketsend",
+    "description": "Practical software or service shared in the chat.",
+    "category": "General",
+    "type": "Tool",
+    "url": "https://www.rocketsend.io/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 154,
+    "title": "See editor's note at the bottom of page.",
+    "description": "Practical software or service shared in the chat.",
+    "category": "General",
+    "type": "Tool",
+    "url": "https://www.dawn.com/news/1954574",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 155,
+    "title": "ShluchimExchange.ai",
+    "description": "Practical software or service shared in the chat.",
+    "category": "General",
+    "type": "Tool",
+    "url": "https://www.ShluchimExchange.ai/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 156,
+    "title": "Split My Class",
+    "description": "Practical software or service shared in the chat.",
+    "category": "General",
+    "type": "Tool",
+    "url": "https://berel.me/splitmyclass",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 157,
+    "title": "Studio",
+    "description": "Practical software or service shared in the chat.",
+    "category": "General",
+    "type": "Tool",
+    "url": "https://workspace.google.com/studio/?utm_source=twitter&utm_medium=unpaidsoc&utm_campaign=FY25-Q4-amer-googleworkspace_website_Workspace-Flows&utm_content=-&utm_term=-&t=dcTsa5Ek9EBk8-oG_ezIJg&s=08",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 158,
+    "title": "Tazjdl",
+    "description": "Practical software or service shared in the chat.",
+    "category": "General",
+    "type": "Tool",
+    "url": "https://conta.cc/4tazjdL",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 159,
+    "title": "There is also probably the best in the world and most accurate, but very pricy.",
+    "description": "Practical software or service shared in the chat.",
+    "category": "General",
+    "type": "Tool",
+    "url": "https://itimlabina.co.il/developers/home",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 160,
+    "title": "Tried this?",
+    "description": "Practical software or service shared in the chat.",
+    "category": "General",
+    "type": "Tool",
+    "url": "https://remusic.ai/ai-sheet-music-generator",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 161,
+    "title": "Try this",
+    "description": "Practical software or service shared in the chat.",
+    "category": "General",
+    "type": "Tool",
+    "url": "https://www.datablist.com/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 162,
+    "title": "Upload",
+    "description": "Practical software or service shared in the chat.",
+    "category": "General",
+    "type": "Tool",
+    "url": "https://www.upscale.media/upload?url=undefined",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 163,
+    "title": "Verify email addresses without sending a single email",
+    "description": "Practical software or service shared in the chat.",
+    "category": "General",
+    "type": "Tool",
+    "url": "https://www.opensourceprojects.dev/post/f92d73de-f92f-412a-bc8f-08ff5bf80115",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 164,
+    "title": "g1",
+    "description": "Practical software or service shared in the chat.",
+    "category": "General",
+    "type": "Tool",
+    "url": "https://www.unitree.com/mobile/g1",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 165,
+    "title": "Anthropic Academy",
+    "description": "Reference shared in the chat for learning, inspiration, or practical use.",
+    "category": "AI Assistants",
+    "type": "Resource",
+    "url": "https://anthropic.skilljar.com/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 166,
+    "title": "CHATGPT PLUS VS FREE, WHAT’S THE DIFFERENCE?",
+    "description": "Reference shared in the chat for learning, inspiration, or practical use.",
+    "category": "AI Assistants",
+    "type": "Resource",
+    "url": "https://share.google/ehIfvOL0XrNrT6lfk",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 167,
+    "title": "ChatGPT share",
+    "description": "Reference shared in the chat for learning, inspiration, or practical use.",
+    "category": "AI Assistants",
+    "type": "Resource",
+    "url": "https://chatgpt.com/s/t_692c3c09951c819180abab61bf16b76e",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 168,
+    "title": "Chatgpt",
+    "description": "Reference shared in the chat for learning, inspiration, or practical use.",
+    "category": "AI Assistants",
+    "type": "Resource",
+    "url": "https://sora.chatgpt.com",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 169,
+    "title": "Chatgpts Hallucination Problem Fabricated References",
+    "description": "Reference shared in the chat for learning, inspiration, or practical use.",
+    "category": "AI Assistants",
+    "type": "Resource",
+    "url": "https://studyfinds.org/chatgpts-hallucination-problem-fabricated-references/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 170,
+    "title": "Claude For Nonprofits",
+    "description": "Reference shared in the chat for learning, inspiration, or practical use.",
+    "category": "AI Assistants",
+    "type": "Resource",
+    "url": "https://www.anthropic.com/news/claude-for-nonprofits",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 171,
+    "title": "Claude artifact",
+    "description": "Reference shared in the chat for learning, inspiration, or practical use.",
+    "category": "AI Assistants",
+    "type": "Resource",
+    "url": "https://claude.ai/public/artifacts/c0fcbf8e-e83c-4cd5-bd99-48199930bf85",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 172,
+    "title": "Copilot VS Chatgpt",
+    "description": "Reference shared in the chat for learning, inspiration, or practical use.",
+    "category": "AI Assistants",
+    "type": "Resource",
+    "url": "https://business.canon.com.au/insights/copilot-vs-chatgpt",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 173,
+    "title": "Custom GPT",
+    "description": "Reference shared in the chat for learning, inspiration, or practical use.",
+    "category": "AI Assistants",
+    "type": "Resource",
+    "url": "https://chatgpt.com/g/g-68245157284c81918b5bb57de15e7eec-mptkh-lqvty-shykhvt",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 174,
+    "title": "Dreidel raffle creator",
+    "description": "Reference shared in the chat for learning, inspiration, or practical use.",
+    "category": "AI Assistants",
+    "type": "Resource",
+    "url": "https://berel.me/dreidel/event_create.php",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 175,
+    "title": "Gemini",
+    "description": "Reference shared in the chat for learning, inspiration, or practical use.",
+    "category": "AI Assistants",
+    "type": "Resource",
+    "url": "https://gemini.google.com/share/5c43cf3c3957",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 176,
+    "title": "Gpts 9t557fxbrqf Handwriting TO Text",
+    "description": "Reference shared in the chat for learning, inspiration, or practical use.",
+    "category": "AI Assistants",
+    "type": "Resource",
+    "url": "http://cdn.yeschat.ai/gpts-9t557fXbRqf-Handwriting-To-Text",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 177,
+    "title": "Group Chats IN Chatgpt",
+    "description": "Reference shared in the chat for learning, inspiration, or practical use.",
+    "category": "AI Assistants",
+    "type": "Resource",
+    "url": "https://openai.com/index/group-chats-in-chatgpt/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 178,
+    "title": "Introducing Chatgpt GO",
+    "description": "Reference shared in the chat for learning, inspiration, or practical use.",
+    "category": "AI Assistants",
+    "type": "Resource",
+    "url": "https://openai.com/index/introducing-chatgpt-go/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 179,
+    "title": "Openai Unveils GPT 5 A New Era OF Phd Level AI Capabilities",
+    "description": "Reference shared in the chat for learning, inspiration, or practical use.",
+    "category": "AI Assistants",
+    "type": "Resource",
+    "url": "https://medium.com/@hamza_automates/openai-unveils-gpt-5-a-new-era-of-phd-level-ai-capabilities-379d742e7152",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 180,
+    "title": "Projects in ChatGPT | OpenAI Help Center",
+    "description": "Reference shared in the chat for learning, inspiration, or practical use.",
+    "category": "AI Assistants",
+    "type": "Resource",
+    "url": "https://share.google/vROf72Dil3tsTWimH",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 181,
+    "title": "Sinaigpt",
+    "description": "Reference shared in the chat for learning, inspiration, or practical use.",
+    "category": "AI Assistants",
+    "type": "Resource",
+    "url": "https://tinyurl.com/SinaiGPT",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 182,
+    "title": "The Revolutionary Impact OF Claude AI A Game Changer For Software Engineering",
+    "description": "Reference shared in the chat for learning, inspiration, or practical use.",
+    "category": "AI Assistants",
+    "type": "Resource",
+    "url": "https://lunanotes.io/summary/the-revolutionary-impact-of-claude-ai-a-game-changer-for-software-engineering",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 183,
+    "title": "Zach Fish You Can Now Connect Your Chatgpt Chats TO Activity Jwfb",
+    "description": "Reference shared in the chat for learning, inspiration, or practical use.",
+    "category": "AI Assistants",
+    "type": "Resource",
+    "url": "https://www.linkedin.com/posts/zach-fish_you-can-now-connect-your-chatgpt-chats-to-activity-7372280573194715137-jwFB?utm_source=li_share&utm_content=feedcontent&utm_medium=g_mb_web&utm_campaign=copy",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 184,
+    "title": "ChatGPT for Teachers",
+    "description": "Reference shared in the chat for learning, inspiration, or practical use.",
+    "category": "AI Assistants",
+    "type": "Resource",
+    "url": "https://openai.com/index/chatgpt-for-teachers/",
+    "mentionCount": 1,
+    "timesShared": 0
+  },
+  {
+    "id": 185,
+    "title": "FYI An article I recently wrote on the topic of Ai and Judaism",
+    "description": "Shared as a Jewish, Torah, or shlichus-oriented resource.",
+    "category": "Jewish & Shlichus",
+    "type": "Resource",
+    "url": "https://www.sajr.co.za/ai-is-helpful-but-it-has-no-jewish-soul/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 186,
+    "title": "Gemini share",
+    "description": "Shared as a Jewish, Torah, or shlichus-oriented resource.",
+    "category": "Jewish & Shlichus",
+    "type": "Resource",
+    "url": "https://g.co/gemini/share/37bb0f6b2b67",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 187,
+    "title": "GitHub Gist",
+    "description": "Shared as a Jewish, Torah, or shlichus-oriented resource.",
+    "category": "Jewish & Shlichus",
+    "type": "Resource",
+    "url": "https://gist.github.com/jonazri/006e3b667dc309f8db4d9875ce8a51e1",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 188,
+    "title": "Google Doc",
+    "description": "Shared as a Jewish, Torah, or shlichus-oriented resource.",
+    "category": "Jewish & Shlichus",
+    "type": "Resource",
+    "url": "https://docs.google.com/document/d/1miQMwq4tSGoz48HjzhBvPobtBBfzt66f/edit?usp=sharing&ouid=103208031191148626225&rtpof=true&sd=true",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 189,
+    "title": "Movers Referral Tool",
+    "description": "Shared as a Jewish, Torah, or shlichus-oriented resource.",
+    "category": "Jewish & Shlichus",
+    "type": "Resource",
+    "url": "https://github.com/thepuppetsfun-rgb/movers-referral-tool",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 190,
+    "title": "NotebookLM notebook share",
+    "description": "Shared as a Jewish, Torah, or shlichus-oriented resource.",
+    "category": "Jewish & Shlichus",
+    "type": "Resource",
+    "url": "https://notebooklm.google.com/notebook/0375bbde-4fcc-4bd5-82e8-04ea5528d9f4?artifactId=e8a72819-a157-48d3-b824-d556005dee23",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 191,
+    "title": "Shluchim Built A Megillah App IN 10 Days",
+    "description": "Shared as a Jewish, Torah, or shlichus-oriented resource.",
+    "category": "Jewish & Shlichus",
+    "type": "Resource",
+    "url": "https://collive.com/700-shluchim-built-a-megillah-app-in-10-days/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 192,
+    "title": "AI4 Shlichus notebook",
+    "description": "Shared as a Jewish, Torah, or shlichus-oriented resource.",
+    "category": "Jewish & Shlichus",
+    "type": "Tool",
+    "url": "https://ai4.shlch.us/notebook",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 193,
+    "title": "Can AI Really Learn Torah A Calm Honest Answer",
+    "description": "Shared as a Jewish, Torah, or shlichus-oriented resource.",
+    "category": "Jewish & Shlichus",
+    "type": "Tool",
+    "url": "https://chattorah.com/can-ai-really-learn-torah-a-calm-honest-answer/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 194,
+    "title": "Chabadfortwayne",
+    "description": "Shared as a Jewish, Torah, or shlichus-oriented resource.",
+    "category": "Jewish & Shlichus",
+    "type": "Tool",
+    "url": "https://www.chabadfortwayne.com/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 195,
+    "title": "Chabadintown",
+    "description": "Shared as a Jewish, Torah, or shlichus-oriented resource.",
+    "category": "Jewish & Shlichus",
+    "type": "Tool",
+    "url": "https://www.chabadintown.com/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 196,
+    "title": "Chabadmidtown",
+    "description": "Shared as a Jewish, Torah, or shlichus-oriented resource.",
+    "category": "Jewish & Shlichus",
+    "type": "Tool",
+    "url": "https://www.chabadmidtown.com/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 197,
+    "title": "Chabaduptown",
+    "description": "Shared as a Jewish, Torah, or shlichus-oriented resource.",
+    "category": "Jewish & Shlichus",
+    "type": "Tool",
+    "url": "https://www.chabaduptown.com/102819",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 198,
+    "title": "Chabadwestvillage",
+    "description": "Shared as a Jewish, Torah, or shlichus-oriented resource.",
+    "category": "Jewish & Shlichus",
+    "type": "Tool",
+    "url": "https://www.chabadwestvillage.com/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 199,
+    "title": "Chanukah",
+    "description": "Shared as a Jewish, Torah, or shlichus-oriented resource.",
+    "category": "Jewish & Shlichus",
+    "type": "Tool",
+    "url": "https://www.chabaduptown.com/chanukah",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 200,
+    "title": "ChatTorah",
+    "description": "Shared as a Jewish, Torah, or shlichus-oriented resource.",
+    "category": "Jewish & Shlichus",
+    "type": "Tool",
+    "url": "https://chattorah.com/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 201,
+    "title": "Ckids Clubs",
+    "description": "Shared as a Jewish, Torah, or shlichus-oriented resource.",
+    "category": "Jewish & Shlichus",
+    "type": "Tool",
+    "url": "https://www.jewishfolsom.org/templates/articlecco_cdo/aid/7010126/jewish/CKids-Clubs.htm",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 202,
+    "title": "Default.asp",
+    "description": "Shared as a Jewish, Torah, or shlichus-oriented resource.",
+    "category": "Jewish & Shlichus",
+    "type": "Tool",
+    "url": "https://www.chabad.org/tools/shared/candlelighting/default.asp?aid=264483&locationid=11213&locationtype=2&save=1&tdate=3-11-2026",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 203,
+    "title": "Dicta",
+    "description": "Shared as a Jewish, Torah, or shlichus-oriented resource.",
+    "category": "Jewish & Shlichus",
+    "type": "Tool",
+    "url": "https://chabad.mekorotai.dicta.org.il",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 204,
+    "title": "Donate",
+    "description": "Shared as a Jewish, Torah, or shlichus-oriented resource.",
+    "category": "Jewish & Shlichus",
+    "type": "Tool",
+    "url": "https://www.chabadatpenn.com/donate",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 205,
+    "title": "Fhxmrlmsm2lnhteilbdyeu",
+    "description": "Shared as a Jewish, Torah, or shlichus-oriented resource.",
+    "category": "Jewish & Shlichus",
+    "type": "Tool",
+    "url": "https://manus.im/share/FhxMRlmsM2lNHTeILbdyEu",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 206,
+    "title": "Find a Sicha",
+    "description": "Shared as a Jewish, Torah, or shlichus-oriented resource.",
+    "category": "Jewish & Shlichus",
+    "type": "Tool",
+    "url": "https://berel.me/findasicha",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 207,
+    "title": "Hamesivta Siddur",
+    "description": "Shared as a Jewish, Torah, or shlichus-oriented resource.",
+    "category": "Jewish & Shlichus",
+    "type": "Tool",
+    "url": "https://Hamesivta.com/siddur/bi",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 208,
+    "title": "Home",
+    "description": "Shared as a Jewish, Torah, or shlichus-oriented resource.",
+    "category": "Jewish & Shlichus",
+    "type": "Tool",
+    "url": "https://learningtanach.org/home",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 209,
+    "title": "I7xyns64ph9s2m7e",
+    "description": "Shared as a Jewish, Torah, or shlichus-oriented resource.",
+    "category": "Jewish & Shlichus",
+    "type": "Tool",
+    "url": "https://suno.com/s/I7xyNs64pH9s2m7E",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 210,
+    "title": "JewScore",
+    "description": "Shared as a Jewish, Torah, or shlichus-oriented resource.",
+    "category": "Jewish & Shlichus",
+    "type": "Tool",
+    "url": "https://ai4.shlch.us/jewscore",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 211,
+    "title": "Jewishchagrinfalls",
+    "description": "Shared as a Jewish, Torah, or shlichus-oriented resource.",
+    "category": "Jewish & Shlichus",
+    "type": "Tool",
+    "url": "https://www.jewishchagrinfalls.com/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 212,
+    "title": "Light",
+    "description": "Shared as a Jewish, Torah, or shlichus-oriented resource.",
+    "category": "Jewish & Shlichus",
+    "type": "Tool",
+    "url": "https://www.chabadhouston.com/light",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 213,
+    "title": "Live",
+    "description": "Shared as a Jewish, Torah, or shlichus-oriented resource.",
+    "category": "Jewish & Shlichus",
+    "type": "Tool",
+    "url": "https://megillah.app/live",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 214,
+    "title": "Loom",
+    "description": "Shared as a Jewish, Torah, or shlichus-oriented resource.",
+    "category": "Jewish & Shlichus",
+    "type": "Tool",
+    "url": "https://www.loom.com/share/bf817204bb53414682d347282dcdf8d5",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 215,
+    "title": "Megillah",
+    "description": "Shared as a Jewish, Torah, or shlichus-oriented resource.",
+    "category": "Jewish & Shlichus",
+    "type": "Tool",
+    "url": "https://ai770.com/megillah/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 216,
+    "title": "Megillah.app",
+    "description": "Shared as a Jewish, Torah, or shlichus-oriented resource.",
+    "category": "Jewish & Shlichus",
+    "type": "Tool",
+    "url": "https://megillah.app/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 217,
+    "title": "Noveleffect",
+    "description": "Shared as a Jewish, Torah, or shlichus-oriented resource.",
+    "category": "Jewish & Shlichus",
+    "type": "Tool",
+    "url": "https://noveleffect.com",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 218,
+    "title": "Passover Minisite",
+    "description": "Shared as a Jewish, Torah, or shlichus-oriented resource.",
+    "category": "Jewish & Shlichus",
+    "type": "Tool",
+    "url": "https://www.jewishpedro.org/templates/articlecco_cdo/aid/7260228/jewish/Passover-Minisite.htm#seder",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 219,
+    "title": "Purim Minisite",
+    "description": "Shared as a Jewish, Torah, or shlichus-oriented resource.",
+    "category": "Jewish & Shlichus",
+    "type": "Tool",
+    "url": "https://www.jewishpedro.org/templates/articlecco_cdo/aid/7260225/jewish/Purim-Minisite.htm",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 220,
+    "title": "Purim5785",
+    "description": "Shared as a Jewish, Torah, or shlichus-oriented resource.",
+    "category": "Jewish & Shlichus",
+    "type": "Tool",
+    "url": "https://www.judaismlive.com/purim5785",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 221,
+    "title": "Purim5786",
+    "description": "Shared as a Jewish, Torah, or shlichus-oriented resource.",
+    "category": "Jewish & Shlichus",
+    "type": "Tool",
+    "url": "https://www.judaismlive.com/purim5786",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 222,
+    "title": "Rambam.life",
+    "description": "Shared as a Jewish, Torah, or shlichus-oriented resource.",
+    "category": "Jewish & Shlichus",
+    "type": "Tool",
+    "url": "https://rambam.life/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 223,
+    "title": "Reader",
+    "description": "Shared as a Jewish, Torah, or shlichus-oriented resource.",
+    "category": "Jewish & Shlichus",
+    "type": "Tool",
+    "url": "https://learningtanach.org/esther/reader",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 224,
+    "title": "Texts Writings",
+    "description": "Shared as a Jewish, Torah, or shlichus-oriented resource.",
+    "category": "Jewish & Shlichus",
+    "type": "Tool",
+    "url": "https://www.chabad.org/library/article_cdo/aid/76131/jewish/Texts-Writings.htm",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 225,
+    "title": "That's what I did here for High Holidays",
+    "description": "Shared as a Jewish, Torah, or shlichus-oriented resource.",
+    "category": "Jewish & Shlichus",
+    "type": "Tool",
+    "url": "https://www.jewishpedro.org/templates/articlecco_cdo/aid/7032701/jewish/High-Holidays-2025-Home-Page.htm",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 226,
+    "title": "The Rebbes Global Footprint",
+    "description": "Shared as a Jewish, Torah, or shlichus-oriented resource.",
+    "category": "Jewish & Shlichus",
+    "type": "Tool",
+    "url": "https://the-rebbes-global-footprint-7690ba86.base44.app",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 227,
+    "title": "Themitzvahclub",
+    "description": "Shared as a Jewish, Torah, or shlichus-oriented resource.",
+    "category": "Jewish & Shlichus",
+    "type": "Tool",
+    "url": "https://www.themitzvahclub.com/product/the-layered-torah-trainer-purim-/20?cs=true&cst=custom",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 228,
+    "title": "Transcribe Yiddish audio. Correct grammar, rephrase, and translate effortlessly",
+    "description": "Shared as a Jewish, Torah, or shlichus-oriented resource.",
+    "category": "Jewish & Shlichus",
+    "type": "Tool",
+    "url": "https://app.yiddishlabs.com/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 229,
+    "title": "Updates",
+    "description": "Shared as a Jewish, Torah, or shlichus-oriented resource.",
+    "category": "Jewish & Shlichus",
+    "type": "Tool",
+    "url": "https://megillah.app/updates",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 230,
+    "title": "Use this tool",
+    "description": "Shared as a Jewish, Torah, or shlichus-oriented resource.",
+    "category": "Jewish & Shlichus",
+    "type": "Tool",
+    "url": "https://sites6.centers.clhosting.org/templates/fundraising/default_cdo/aid/5562593/jewish/Campaign.htm/lang/en",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 231,
+    "title": "Vercel",
+    "description": "Shared as a Jewish, Torah, or shlichus-oriented resource.",
+    "category": "Jewish & Shlichus",
+    "type": "Tool",
+    "url": "https://movers-referral-tool.vercel.app",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 232,
+    "title": "Zmanim",
+    "description": "Shared as a Jewish, Torah, or shlichus-oriented resource.",
+    "category": "Jewish & Shlichus",
+    "type": "Tool",
+    "url": "http://www.chabad.org/tools/rss/zmanim.xml?locationId=18325&locationType=2&bDef=0&before=18",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 233,
+    "title": "Hamesivta",
+    "description": "Shared as a Jewish, Torah, or shlichus-oriented resource.",
+    "category": "Jewish & Shlichus",
+    "type": "Resource",
+    "url": "https://Hamesivta.com/siddur/bi",
+    "mentionCount": 1,
+    "timesShared": 0
+  },
+  {
+    "id": 234,
+    "title": "AI770",
+    "description": "Shared as a Jewish, Torah, or shlichus-oriented resource.",
+    "category": "Jewish & Shlichus",
+    "type": "Resource",
+    "url": "https://ai770.com/megillah/",
+    "mentionCount": 1,
+    "timesShared": 0
+  },
+  {
+    "id": 235,
+    "title": "YiddishLabs",
+    "description": "Shared as a Jewish, Torah, or shlichus-oriented resource.",
+    "category": "Jewish & Shlichus",
+    "type": "Resource",
+    "url": "https://app.yiddishlabs.com/",
+    "mentionCount": 1,
+    "timesShared": 0
+  },
+  {
+    "id": 236,
+    "title": "D65",
+    "description": "Reference shared in the chat for learning, inspiration, or practical use.",
+    "category": "Productivity",
+    "type": "Resource",
+    "url": "https://gemini.google.com/share/730209134d65",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 237,
+    "title": "Meeting Summaries, Transcripts, AI Notetaker & Enterprise Search | read.ai",
+    "description": "Reference shared in the chat for learning, inspiration, or practical use.",
+    "category": "Productivity",
+    "type": "Resource",
+    "url": "https://share.google/dlbzk0M500bZVgm1K",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 238,
+    "title": "Node8",
+    "description": "Practical software or service shared in the chat.",
+    "category": "Productivity",
+    "type": "Tool",
+    "url": "https://go.granola.ai/node8",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 239,
+    "title": "Nonprofits",
+    "description": "Practical software or service shared in the chat.",
+    "category": "Productivity",
+    "type": "Tool",
+    "url": "https://monday.com/nonprofits",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 240,
+    "title": "Sunsama",
+    "description": "Practical software or service shared in the chat.",
+    "category": "Productivity",
+    "type": "Tool",
+    "url": "https://sunsama.com/share?refId=681a2560e9e4300001389282",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 241,
+    "title": "AI Transforms Likkutei Sichos",
+    "description": "Good for finding answers, sources, or summaries quickly.",
+    "category": "Research & Search",
+    "type": "Resource",
+    "url": "https://collive.com/ai-transforms-likkutei-sichos/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 242,
+    "title": "Chatgpt VS Claude",
+    "description": "Good for finding answers, sources, or summaries quickly.",
+    "category": "Research & Search",
+    "type": "Resource",
+    "url": "https://neontri.com/blog/chatgpt-vs-claude/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 243,
+    "title": "Chatgpt VS Copilot",
+    "description": "Good for finding answers, sources, or summaries quickly.",
+    "category": "Research & Search",
+    "type": "Resource",
+    "url": "http://datacamp.com/blog/chatgpt-vs-copilot",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 244,
+    "title": "Claude 4 VS GPT 4 VS Gemini Pricing Features Performance",
+    "description": "Good for finding answers, sources, or summaries quickly.",
+    "category": "Research & Search",
+    "type": "Resource",
+    "url": "https://itecsonline.com/post/claude-4-vs-gpt-4-vs-gemini-pricing-features-performance",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 245,
+    "title": "Comet",
+    "description": "Good for finding answers, sources, or summaries quickly.",
+    "category": "Research & Search",
+    "type": "Resource",
+    "url": "https://www.perplexity.ai/comet",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 246,
+    "title": "Convert Handwriting TO Text",
+    "description": "Good for finding answers, sources, or summaries quickly.",
+    "category": "Research & Search",
+    "type": "Resource",
+    "url": "https://support.goodnotes.com/hc/en-us/articles/11361372891023-Convert-handwriting-to-text",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 247,
+    "title": "Document AI",
+    "description": "Good for finding answers, sources, or summaries quickly.",
+    "category": "Research & Search",
+    "type": "Resource",
+    "url": "https://cloud.google.com/document-ai",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 248,
+    "title": "Google AI Updates 2024 Gemini 2 Notebooklm Plus And Veo 2 Review",
+    "description": "Good for finding answers, sources, or summaries quickly.",
+    "category": "Research & Search",
+    "type": "Resource",
+    "url": "https://medium.com/the-abcs-of-ai/google-ai-updates-2024-gemini-2-notebooklm-plus-and-veo-2-review-e13d1a6ae2b4",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 249,
+    "title": "Google Form",
+    "description": "Good for finding answers, sources, or summaries quickly.",
+    "category": "Research & Search",
+    "type": "Resource",
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSdYLiTNIEVuZjk3XFIsQT-QQynV2-2EL9_PQNT8x-VNNAyTKA/viewform?usp=dialog",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 250,
+    "title": "Handwriting TO Text The 5 10330",
+    "description": "Good for finding answers, sources, or summaries quickly.",
+    "category": "Research & Search",
+    "type": "Resource",
+    "url": "https://technical-tips.com/blog/ios/handwriting-to-text-the-5-10330",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 251,
+    "title": "Introducing Model Council",
+    "description": "Good for finding answers, sources, or summaries quickly.",
+    "category": "Research & Search",
+    "type": "Resource",
+    "url": "https://www.perplexity.ai/hub/blog/introducing-model-council",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 252,
+    "title": "It's kinda funny but hey- it works, and can be cleaned by another AI",
+    "description": "Good for finding answers, sources, or summaries quickly.",
+    "category": "Research & Search",
+    "type": "Resource",
+    "url": "https://docs.google.com/document/d/1AM8l_zv2-BPcFVRB5TRyLYZjwBND9wdJ_kcxk-e0UiM/edit?usp=drivesdk",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 253,
+    "title": "Mendyshish85292",
+    "description": "Good for finding answers, sources, or summaries quickly.",
+    "category": "Research & Search",
+    "type": "Resource",
+    "url": "https://pplx.ai/mendyshish85292",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 254,
+    "title": "Notebooklm BY Google Labs",
+    "description": "Good for finding answers, sources, or summaries quickly.",
+    "category": "Research & Search",
+    "type": "Resource",
+    "url": "https://www.techbeams.com/google/notebooklm-by-google-labs/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 255,
+    "title": "Openai For Nonprofits",
+    "description": "Good for finding answers, sources, or summaries quickly.",
+    "category": "Research & Search",
+    "type": "Resource",
+    "url": "https://help.openai.com/en/articles/9359041-openai-for-nonprofits?utm_source=chatgpt.com",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 256,
+    "title": "Openai GPT 4o Showcases AI Potential",
+    "description": "Good for finding answers, sources, or summaries quickly.",
+    "category": "Research & Search",
+    "type": "Resource",
+    "url": "https://www.ultralytics.com/blog/openai-gpt-4o-showcases-ai-potential",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 257,
+    "title": "Openais GPT 4o Everything You Need TO Know IN One Place",
+    "description": "Good for finding answers, sources, or summaries quickly.",
+    "category": "Research & Search",
+    "type": "Resource",
+    "url": "https://daily.dev/blog/openais-gpt-4o-everything-you-need-to-know-in-one-place",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 258,
+    "title": "Paypal Subscription",
+    "description": "Good for finding answers, sources, or summaries quickly.",
+    "category": "Research & Search",
+    "type": "Resource",
+    "url": "https://www.perplexity.ai/join/p/paypal-subscription",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 259,
+    "title": "Pomelli Photoshoot",
+    "description": "Good for finding answers, sources, or summaries quickly.",
+    "category": "Research & Search",
+    "type": "Resource",
+    "url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/pomelli-photoshoot/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 260,
+    "title": "Your article touches on a point from this recent episode.",
+    "description": "Good for finding answers, sources, or summaries quickly.",
+    "category": "Research & Search",
+    "type": "Resource",
+    "url": "https://open.spotify.com/episode/2pyeKCy5i6HD7pL1Fk0tcN?si=hXEzfKQPRiO9TquSUAx9cg",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 261,
+    "title": "Ai Moshiach Video by Avraham Fried!",
+    "description": "Useful for making, editing, or repackaging videos.",
+    "category": "Video & Media",
+    "type": "Resource",
+    "url": "https://youtu.be/vrzCfLPTOcI?si=OLXW-AOYf6fBXl2j",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 262,
+    "title": "New, free and apparently great",
+    "description": "Useful for making, editing, or repackaging videos.",
+    "category": "Video & Media",
+    "type": "Resource",
+    "url": "https://www.youtube.com/intl/en_za/creators/youtube-create/",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 263,
+    "title": "For videos. New thing they just released",
+    "description": "Useful for making, editing, or repackaging videos.",
+    "category": "Video & Media",
+    "type": "Tool",
+    "url": "https://new.synthesys.io/ai-vsl-studio/?utm_campaign=%23%201%20Synthesys%20AI%20VSL%20Studio%20%28Reccuring%29%20%28Copy%29&utm_content=A%20personal%20update%20from%20Oliver&utm_medium=email&utm_source=ActiveCampaign#lp-pom-block-2822",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 264,
+    "title": "Vids",
+    "description": "Useful for making, editing, or repackaging videos.",
+    "category": "Video & Media",
+    "type": "Tool",
+    "url": "https://workspace.google.com/products/vids/#vids-create",
+    "mentionCount": 0,
+    "timesShared": 1
+  },
+  {
+    "id": 265,
+    "title": "Google Vids",
+    "description": "Useful for making, editing, or repackaging videos.",
+    "category": "Video & Media",
+    "type": "Tool",
+    "url": "https://workspace.google.com/products/vids/#vids-create",
+    "mentionCount": 1,
+    "timesShared": 0
+  }
 ]

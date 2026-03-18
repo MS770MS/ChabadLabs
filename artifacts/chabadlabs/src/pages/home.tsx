@@ -357,7 +357,7 @@ export default function Home() {
             <div className="flex flex-col items-center text-center pt-8 md:pt-0 group relative">
               <div className="absolute inset-0 bg-primary/5 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
               <span className="text-4xl md:text-5xl font-display font-extrabold text-primary mb-2 text-glow relative z-10">
-                <AnimatedCounter value={12} />+
+                <AnimatedCounter value={265} />+
               </span>
               <span className="text-muted-foreground font-medium relative z-10">Curated Resources</span>
             </div>
