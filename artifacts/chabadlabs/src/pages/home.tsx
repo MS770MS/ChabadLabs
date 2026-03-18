@@ -63,11 +63,11 @@ export default function Home() {
       { y: 0, opacity: 1, visibility: "visible", duration: 0.8 },
       "-=0.4"
     )
-    // "future of shlichus"
-    .fromTo(".hero-title-char",
-      { opacity: 0, y: 50, rotateX: -90, visibility: "hidden" },
-      { opacity: 1, y: 0, rotateX: 0, visibility: "visible", duration: 0.8, stagger: 0.03, ease: "back.out(1.7)" },
-      "-=0.4"
+    // "future of shlichus" gold text
+    .fromTo(".hero-title-gold",
+      { opacity: 0, y: 40, scale: 0.95, filter: "blur(8px)", visibility: "hidden" },
+      { opacity: 1, y: 0, scale: 1, filter: "blur(0px)", visibility: "visible", duration: 1, ease: "power2.out" },
+      "-=0.3"
     )
     // Subtitle
     .fromTo(".hero-subtitle",
@@ -87,9 +87,9 @@ export default function Home() {
       "<"
     )
     // Tagline
-    .fromTo(".hero-tagline-char",
-      { opacity: 0, display: "none" },
-      { opacity: 1, display: "inline", duration: 0.05, stagger: 0.02 },
+    .fromTo(".hero-tagline",
+      { opacity: 0, y: 10, visibility: "hidden" },
+      { opacity: 1, y: 0, visibility: "visible", duration: 0.8 },
       "-=0.2"
     );
 
@@ -175,10 +175,9 @@ export default function Home() {
   }, { scope: containerRef });
 
   const titleText = "future of shlichus";
-  const taglineText = "Open source · Community driven · Security first";
 
   return (
-    <div ref={containerRef} className="flex flex-col relative">
+    <div ref={containerRef} className="flex flex-col relative overflow-x-hidden">
       {/* Subtle Horizontal Scanline for Hero */}
       <div className="absolute top-0 left-0 w-full h-[5px] bg-primary/20 shadow-[0_0_10px_var(--primary)] z-50 pointer-events-none animate-[scanline_8s_linear_infinite]" />
       
@@ -209,20 +208,16 @@ export default function Home() {
             </span>
           </div>
 
-          <h1 className="text-5xl md:text-7xl lg:text-[80px] leading-[1.1] font-display font-black text-foreground mb-6">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-[80px] leading-[1.1] font-display font-extrabold text-foreground mb-6 px-2">
             <div className="hero-welcome gsap-hidden">
-              Welcome to the <br className="hidden sm:block" />
+              Welcome to the
             </div>
-            <span className="text-glow text-transparent bg-clip-text bg-gradient-to-r from-primary via-yellow-100 to-primary animate-shimmer relative inline-block">
-              {titleText.split("").map((char, index) => (
-                <span key={index} className="hero-title-char inline-block gsap-hidden">
-                  {char === " " ? "\u00A0" : char}
-                </span>
-              ))}
+            <span className="hero-title-gold gsap-hidden text-glow text-transparent bg-clip-text bg-gradient-to-r from-primary via-yellow-100 to-primary animate-shimmer relative inline-block">
+              {titleText}
             </span>
           </h1>
 
-          <p className="hero-subtitle text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed gsap-hidden">
+          <p className="hero-subtitle text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed gsap-hidden px-2">
             Your AI-powered command center. Tools, resources, and a community of builders — transforming shlichus with cutting-edge technology.
           </p>
 
@@ -247,21 +242,12 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex items-center gap-2 sm:gap-4 text-xs sm:text-sm text-muted-foreground font-mono">
-            {taglineText.split("").map((char, index) => {
-              if (char === "·") {
-                return (
-                  <span key={index} className="hero-tagline-char gsap-hidden mx-1">
-                    <span className="w-1 h-1 rounded-full bg-primary/50 animate-pulse inline-block align-middle"></span>
-                  </span>
-                );
-              }
-              return (
-                <span key={index} className="hero-tagline-char gsap-hidden">
-                  {char === " " ? "\u00A0" : char}
-                </span>
-              );
-            })}
+          <div className="hero-tagline gsap-hidden flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-xs sm:text-sm text-muted-foreground font-mono px-2">
+            <span>Open source</span>
+            <span className="w-1 h-1 rounded-full bg-primary/50 animate-pulse inline-block"></span>
+            <span>Community driven</span>
+            <span className="w-1 h-1 rounded-full bg-primary/50 animate-pulse inline-block"></span>
+            <span>Security first</span>
           </div>
         </div>
       </section>
@@ -370,28 +356,28 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 divide-y md:divide-y-0 md:divide-x divide-border/50">
             <div className="flex flex-col items-center text-center pt-8 md:pt-0 group relative">
               <div className="absolute inset-0 bg-primary/5 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              <span className="text-4xl md:text-5xl font-display font-black text-primary mb-2 text-glow relative z-10">
+              <span className="text-4xl md:text-5xl font-display font-extrabold text-primary mb-2 text-glow relative z-10">
                 <AnimatedCounter value={12} />+
               </span>
               <span className="text-muted-foreground font-medium relative z-10">Curated Resources</span>
             </div>
             <div className="flex flex-col items-center text-center pt-8 md:pt-0 group relative">
               <div className="absolute inset-0 bg-primary/5 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              <span className="text-4xl md:text-5xl font-display font-black text-primary mb-2 text-glow relative z-10">
+              <span className="text-4xl md:text-5xl font-display font-extrabold text-primary mb-2 text-glow relative z-10">
                 <AnimatedCounter value={3} />+
               </span>
               <span className="text-muted-foreground font-medium relative z-10">Community Webinars</span>
             </div>
             <div className="flex flex-col items-center text-center pt-8 md:pt-0 group relative">
               <div className="absolute inset-0 bg-primary/5 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              <span className="text-4xl md:text-5xl font-display font-black text-primary mb-2 text-glow relative z-10">
+              <span className="text-4xl md:text-5xl font-display font-extrabold text-primary mb-2 text-glow relative z-10">
                 <AnimatedCounter value={157} />
               </span>
               <span className="text-muted-foreground font-medium relative z-10">Active Containers</span>
             </div>
             <div className="flex flex-col items-center text-center pt-8 md:pt-0 group relative">
               <div className="absolute inset-0 bg-primary/5 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              <span className="text-4xl md:text-5xl font-display font-black text-primary mb-2 text-glow relative z-10">Open</span>
+              <span className="text-4xl md:text-5xl font-display font-extrabold text-primary mb-2 text-glow relative z-10">Open</span>
               <span className="text-muted-foreground font-medium relative z-10">Source & Driven</span>
             </div>
           </div>

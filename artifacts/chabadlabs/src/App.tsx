@@ -19,7 +19,7 @@ const queryClient = new QueryClient();
 
 function Router() {
   return (
-    <div className="min-h-screen flex flex-col selection:bg-primary/30 selection:text-primary">
+    <div className="min-h-screen flex flex-col selection:bg-primary/30 selection:text-primary overflow-x-hidden">
       <Navbar />
       <main className="flex-1">
         <Switch>
