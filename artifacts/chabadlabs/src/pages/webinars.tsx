@@ -33,8 +33,8 @@ export default function Webinars() {
           return (
             <div 
               key={webinar.id} 
-              className={`bg-card border rounded-2xl overflow-hidden transition-all duration-300 ${
-                isExpanded ? "border-primary/50 shadow-[0_0_30px_-10px_rgba(196,154,42,0.15)]" : "border-border hover:border-border/80"
+              className={`bg-transparent border rounded-2xl overflow-hidden transition-all duration-300 card-futuristic ${
+                isExpanded ? "border-transparent shadow-[0_0_30px_-10px_rgba(196,154,42,0.15)]" : "border-border/50"
               }`}
             >
               {/* Header / Clickable Area */}

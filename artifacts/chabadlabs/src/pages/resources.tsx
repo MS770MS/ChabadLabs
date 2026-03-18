@@ -85,7 +85,7 @@ export default function Resources() {
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.2 }}
                 key={resource.id}
-                className="bg-card border border-border rounded-2xl p-6 flex flex-col hover:border-primary/50 hover:-translate-y-1 hover:shadow-[0_0_30px_-10px_rgba(196,154,42,0.1)] transition-all duration-300 group"
+                className="bg-transparent border border-border rounded-2xl p-6 flex flex-col transition-all duration-300 group card-futuristic"
               >
                 <div className="mb-4">
                   <CategoryBadge category={resource.category as Category} />
