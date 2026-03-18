@@ -1,11 +1,12 @@
 import { Link } from "wouter";
-import { BookOpen, PlayCircle, MessageSquare, Shield, ArrowRight } from "lucide-react";
+import { Wrench, PlayCircle, MessageSquare, Rocket, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SectionLabel } from "@/components/section-label";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import webinars from "@/data/webinars.json";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -14,9 +15,9 @@ function AnimatedCounter({ value }: { value: number }) {
 
   useGSAP(() => {
     if (!counterRef.current) return;
-    
+
     const obj = { val: 0 };
-    
+
     gsap.to(obj, {
       val: value,
       duration: 2,
@@ -32,8 +33,8 @@ function AnimatedCounter({ value }: { value: number }) {
         }
       },
       onComplete: () => {
-        gsap.fromTo(counterRef.current, 
-          { scale: 1 }, 
+        gsap.fromTo(counterRef.current,
+          { scale: 1 },
           { scale: 1.1, duration: 0.15, yoyo: true, repeat: 1, ease: "power1.inOut" }
         );
       }
@@ -51,7 +52,7 @@ export default function Home() {
 
     // --- Hero Timeline ---
     const heroTl = gsap.timeline({ delay: 0.1 });
-    
+
     // Badge
     heroTl.fromTo(".hero-badge",
       { opacity: 0, scale: 0.8, filter: "blur(10px)", visibility: "hidden" },
@@ -161,8 +162,8 @@ export default function Home() {
 
     gsap.fromTo(".cta-reveal",
       { y: 40, opacity: 0, visibility: "hidden" },
-      { 
-        y: 0, opacity: 1, visibility: "visible", 
+      {
+        y: 0, opacity: 1, visibility: "visible",
         stagger: 0.2, duration: 0.8, ease: "power3.out",
         scrollTrigger: {
           trigger: ".cta-section",
@@ -178,9 +179,6 @@ export default function Home() {
 
   return (
     <div ref={containerRef} className="flex flex-col relative overflow-x-hidden">
-      {/* Subtle Horizontal Scanline for Hero */}
-      <div className="absolute top-0 left-0 w-full h-[5px] bg-primary/20 shadow-[0_0_10px_var(--primary)] z-50 pointer-events-none animate-[scanline_8s_linear_infinite]" />
-      
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-20">
         {/* Background Gradients */}
@@ -224,9 +222,9 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row items-center gap-4 mb-8 w-full sm:w-auto">
             <div className="hero-btn-left gsap-hidden w-full sm:w-auto">
               <Button size="lg" className="w-full sm:w-auto text-lg group btn-futuristic glow-primary" asChild>
-                <Link href="/resources">
+                <Link href="/tools">
                   <span className="relative z-10 flex items-center">
-                    Explore Resources
+                    Explore Tools
                     <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </span>
                 </Link>
@@ -260,25 +258,25 @@ export default function Home() {
       {/* Bento Grid Section */}
       <section className="bento-section py-24 md:py-32 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <SectionLabel number="001" label="WHAT WE OFFER" />
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-min">
-          
-          {/* Card 1: Resources (Large) */}
-          <Link href="/resources" className="bento-card-large gsap-hidden block md:col-span-2 md:row-span-2 group card-futuristic">
+
+          {/* Card 1: Tools & Resources (Large) */}
+          <Link href="/tools" className="bento-card-large gsap-hidden block md:col-span-2 md:row-span-2 group card-futuristic">
             <div className="h-full bg-transparent p-8 md:p-12 relative flex flex-col justify-end min-h-[300px]">
               <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity animate-float">
-                <BookOpen className="w-48 h-48 text-primary" />
+                <Wrench className="w-48 h-48 text-primary" />
               </div>
               <div className="relative z-10 flex flex-col h-full justify-end">
                 <div className="w-14 h-14 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-6">
-                  <BookOpen className="w-7 h-7 text-primary" />
+                  <Wrench className="w-7 h-7 text-primary" />
                 </div>
-                <h3 className="text-3xl md:text-4xl font-display font-bold mb-4">Curated Resource Library</h3>
+                <h3 className="text-3xl md:text-4xl font-display font-bold mb-4">Tools & Resources</h3>
                 <p className="text-muted-foreground text-lg mb-8 max-w-md">
-                  Everything you need to master AI for your Chabad house. Cloud credits, prompt templates, and security guides.
+                  Curated AI tools for your shlichus
                 </p>
                 <div className="text-primary font-bold flex items-center gap-2">
-                  Browse Resources <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
+                  Browse Tools <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
                 </div>
               </div>
             </div>
@@ -290,9 +288,9 @@ export default function Home() {
               <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-6">
                 <PlayCircle className="w-6 h-6 text-primary" />
               </div>
-              <h3 className="text-2xl font-display font-bold mb-3">Webinar Archive</h3>
+              <h3 className="text-2xl font-display font-bold mb-3">Webinars</h3>
               <p className="text-muted-foreground mb-6">
-                Catch up on past community sessions and live demos.
+                Watch, learn, build with the community
               </p>
               <div className="text-primary font-medium flex items-center gap-2 mt-auto">
                 View Webinars <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -301,45 +299,48 @@ export default function Home() {
           </Link>
 
           {/* Card 3: AI Assistant */}
-          <div className="bento-card-small gsap-hidden block md:col-span-1 group card-futuristic">
+          <div className="bento-card-small gsap-hidden block md:col-span-1 group card-futuristic cursor-pointer" onClick={() => {
+            const chatBtn = document.querySelector('[data-chat-toggle]') as HTMLButtonElement;
+            if (chatBtn) chatBtn.click();
+          }}>
             <div className="h-full bg-transparent p-8 relative flex flex-col">
               <div className="absolute top-6 right-6">
                 <span className="px-2 py-1 text-[10px] font-bold tracking-wider text-primary border border-primary/30 rounded-md bg-primary/10 animate-pulse">
-                  COMING SOON
+                  BETA
                 </span>
               </div>
-              <div className="w-12 h-12 rounded-xl bg-secondary/50 border border-border flex items-center justify-center mb-6">
-                <MessageSquare className="w-6 h-6 text-muted-foreground" />
+              <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-6">
+                <MessageSquare className="w-6 h-6 text-primary" />
               </div>
-              <h3 className="text-2xl font-display font-bold mb-3 text-foreground/70">AI Assistant</h3>
+              <h3 className="text-2xl font-display font-bold mb-3">AI Assistant</h3>
               <p className="text-muted-foreground mb-0">
-                A purpose-built assistant to help you navigate the platform and answer questions.
+                Ask anything about AI for Chabad
               </p>
             </div>
           </div>
 
-          {/* Card 4: Nanoclaw */}
-          <a href="https://github.com/nanoclaw/nanoclaw" target="_blank" rel="noopener noreferrer" className="bento-card-wide gsap-hidden block md:col-span-3 group card-futuristic">
+          {/* Card 4: Live Projects */}
+          <Link href="/showcase" className="bento-card-wide gsap-hidden block md:col-span-3 group card-futuristic">
             <div className="bg-transparent p-8 md:p-10 flex flex-col md:flex-row md:items-center justify-between gap-8">
               <div className="flex-1">
                 <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-6">
-                  <Shield className="w-6 h-6 text-primary" />
+                  <Rocket className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="text-3xl font-display font-bold mb-3">Built on Nanoclaw — Security First</h3>
+                <h3 className="text-3xl font-display font-bold mb-3">Live Projects</h3>
                 <p className="text-muted-foreground text-lg max-w-3xl">
-                  Traditional monolithic AI agents risk prompt injection and data leaks. We use Docker-based isolation to ensure every chat runs in its own secure sandbox.
+                  See what shluchim are building with AI
                 </p>
               </div>
               <div className="shrink-0">
                 <Button variant="outline" size="lg" className="border-primary/50 text-primary hover:bg-primary/10 w-full sm:w-auto btn-futuristic relative">
                   <span className="relative z-10 flex items-center">
-                    Learn More about Nanoclaw
+                    View Projects
                     <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </span>
                 </Button>
               </div>
             </div>
-          </a>
+          </Link>
 
         </div>
       </section>
@@ -352,33 +353,28 @@ export default function Home() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent pointer-events-none"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <SectionLabel number="002" label="THE NETWORK" />
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 divide-y md:divide-y-0 md:divide-x divide-border/50">
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 divide-y md:divide-y-0 md:divide-x divide-border/50">
             <div className="flex flex-col items-center text-center pt-8 md:pt-0 group relative">
               <div className="absolute inset-0 bg-primary/5 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
               <span className="text-4xl md:text-5xl font-display font-extrabold text-primary mb-2 text-glow relative z-10">
                 <AnimatedCounter value={265} />+
               </span>
-              <span className="text-muted-foreground font-medium relative z-10">Curated Resources</span>
+              <span className="text-muted-foreground font-medium relative z-10">Curated Tools</span>
             </div>
             <div className="flex flex-col items-center text-center pt-8 md:pt-0 group relative">
               <div className="absolute inset-0 bg-primary/5 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
               <span className="text-4xl md:text-5xl font-display font-extrabold text-primary mb-2 text-glow relative z-10">
-                <AnimatedCounter value={3} />+
+                <AnimatedCounter value={700} />+
               </span>
-              <span className="text-muted-foreground font-medium relative z-10">Community Webinars</span>
+              <span className="text-muted-foreground font-medium relative z-10">Community Members</span>
             </div>
             <div className="flex flex-col items-center text-center pt-8 md:pt-0 group relative">
               <div className="absolute inset-0 bg-primary/5 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
               <span className="text-4xl md:text-5xl font-display font-extrabold text-primary mb-2 text-glow relative z-10">
-                <AnimatedCounter value={157} />
+                <AnimatedCounter value={webinars.length} /> & Counting
               </span>
-              <span className="text-muted-foreground font-medium relative z-10">Active Containers</span>
-            </div>
-            <div className="flex flex-col items-center text-center pt-8 md:pt-0 group relative">
-              <div className="absolute inset-0 bg-primary/5 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              <span className="text-4xl md:text-5xl font-display font-extrabold text-primary mb-2 text-glow relative z-10">Open</span>
-              <span className="text-muted-foreground font-medium relative z-10">Source & Driven</span>
+              <span className="text-muted-foreground font-medium relative z-10">Webinars</span>
             </div>
           </div>
         </div>
@@ -390,16 +386,16 @@ export default function Home() {
       {/* CTA Section */}
       <section className="cta-section py-32 relative overflow-hidden">
         <div className="cta-glow absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-3xl h-[300px] bg-primary/10 blur-[100px] rounded-full pointer-events-none"></div>
-        
+
         <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
           <SectionLabel number="003" label="JOIN US" className="justify-center" />
           <h2 className="cta-reveal text-4xl md:text-6xl font-display font-bold mb-6 gsap-hidden">Built by shluchim,<br/>for shluchim.</h2>
           <p className="cta-reveal text-xl text-muted-foreground mb-10 max-w-2xl mx-auto gsap-hidden">
-            The power of AI isn't just in the models, it's in how we build together. Join the developers chat and shape the future.
+            The power of AI isn't just in the models, it's in how we build together. Join the community and shape the future.
           </p>
           <div className="cta-reveal gsap-hidden">
             <Button size="lg" className="h-14 px-10 text-lg btn-futuristic glow-primary" asChild>
-              <a href="https://github.com/nanoclaw/nanoclaw" target="_blank" rel="noopener noreferrer">
+              <a href="#" target="_blank" rel="noopener noreferrer">
                 <span className="relative z-10">Join the Community</span>
               </a>
             </Button>
