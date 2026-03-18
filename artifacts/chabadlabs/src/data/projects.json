@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "Megillah.app",
+    "builder": "Mendy Elishevitz",
+    "description": "A digital Megillah reading experience — follow along, learn, and engage with the Megillah like never before.",
+    "imageUrl": "/projects/megillah.svg",
+    "projectUrl": "https://megillah.app",
+    "upvotes": 0,
+    "featured": true,
+    "tags": ["jewish", "education", "web-app"],
+    "createdAt": "2026-01-15"
+  },
+  {
+    "id": 2,
+    "title": "Mikdash.live",
+    "builder": "Mendy Elishevitz",
+    "description": "An interactive experience bringing the Beis HaMikdash to life with modern technology.",
+    "imageUrl": "/projects/mikdash.svg",
+    "projectUrl": "https://mikdash.live",
+    "upvotes": 0,
+    "featured": true,
+    "tags": ["jewish", "education", "immersive"],
+    "createdAt": "2026-02-01"
+  },
+  {
+    "id": 3,
+    "title": "Moshiach.com",
+    "builder": "Mendy Elishevitz",
+    "description": "The central hub for everything about Moshiach — teachings, resources, and inspiration.",
+    "imageUrl": "/projects/moshiach.svg",
+    "projectUrl": "https://moshiach.com",
+    "upvotes": 0,
+    "featured": true,
+    "tags": ["jewish", "education", "content"],
+    "createdAt": "2026-02-20"
+  }
+]
