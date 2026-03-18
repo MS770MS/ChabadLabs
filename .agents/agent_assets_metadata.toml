@@ -1,0 +1,8 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "AZOeSFsCJf13S6aMhtPM7"
+uri = "file://chabadlabs-static-site.tar.gz"
+type = "unspecified"
+title = "ChabadLabs.ai - Static Site Build"
