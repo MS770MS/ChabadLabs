@@ -620,21 +620,6 @@
     "plainEnglishAdvice": "Use when you need links and up-to-date answers."
   },
   {
-    "id": 39,
-    "title": "AI for Work – Rabbi prompts",
-    "description": "Prompt examples specifically for rabbis.",
-    "category": "Jewish & Shlichus",
-    "type": "Prompt library",
-    "url": "https://www.aiforwork.co/role/rabbi",
-    "mentionCount": 0,
-    "timesShared": 0,
-    "tags": [
-      "Jewish & Shlichus"
-    ],
-    "bestFor": "Prompt inspiration and role-based workflows.",
-    "userLevel": "Specialized"
-  },
-  {
     "id": 40,
     "title": "Arrendy AI",
     "description": "AI audio example/project shared in the chat.",
@@ -788,22 +773,6 @@
       "Productivity"
     ],
     "bestFor": "Community-shared AI use cases for shlichus.",
-    "userLevel": "Specialized"
-  },
-  {
-    "id": 50,
-    "title": "SinaiGPT",
-    "description": "Custom GPT shared in the chat.",
-    "category": "Jewish & Shlichus",
-    "type": "Custom GPT",
-    "url": "https://tinyurl.com/SinaiGPT",
-    "mentionCount": 0,
-    "timesShared": 0,
-    "tags": [
-      "Jewish & Shlichus",
-      "AI Assistants"
-    ],
-    "bestFor": "Jewish/Torah-oriented prompting.",
     "userLevel": "Specialized"
   },
   {

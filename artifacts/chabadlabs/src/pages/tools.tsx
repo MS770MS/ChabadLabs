@@ -129,7 +129,7 @@ export default function Tools() {
                 </a>
               </Button>
               <Button className="btn-futuristic glow-primary" asChild>
-                <Link href="/get-started">
+                <Link href="/gabai">
                   <span className="relative z-10">Set Up Your Own</span>
                 </Link>
               </Button>
