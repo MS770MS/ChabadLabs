@@ -8,7 +8,6 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Home from "@/pages/home";
 import Tools from "@/pages/tools";
 import Webinars from "@/pages/webinars";
-import GetStarted from "@/pages/get-started";
 import Showcase from "@/pages/showcase";
 import Fund from "@/pages/fund";
 import GrantApply from "@/pages/grant-apply";
@@ -39,7 +38,6 @@ function Router() {
           <Route path="/tools" component={Tools} />
           <Route path="/resources"><RedirectTo to="/tools" /></Route>
           <Route path="/webinars" component={Webinars} />
-          <Route path="/get-started" component={GetStarted} />
           <Route path="/showcase" component={Showcase} />
           <Route path="/showcase/apply" component={GrantApply} />
           <Route path="/fund" component={Fund} />

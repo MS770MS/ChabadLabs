@@ -6,7 +6,7 @@ import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import webinars from "@/data/webinars.json";
+import projects from "@/data/projects.json";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -232,9 +232,9 @@ export default function Home() {
             </div>
             <div className="hero-btn-right gsap-hidden w-full sm:w-auto">
               <Button variant="outline" size="lg" className="w-full sm:w-auto text-lg border-primary/30 hover:border-primary/80 text-foreground group relative overflow-hidden" asChild>
-                <Link href="/get-started">
+                <Link href="/gabai">
                   <span className="absolute inset-0 bg-primary/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out"></span>
-                  <span className="relative z-10">Get Started</span>
+                  <span className="relative z-10">Gabai</span>
                 </Link>
               </Button>
             </div>
@@ -372,9 +372,9 @@ export default function Home() {
             <div className="flex flex-col items-center text-center pt-8 md:pt-0 group relative">
               <div className="absolute inset-0 bg-primary/5 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
               <span className="text-4xl md:text-5xl font-display font-extrabold text-primary mb-2 text-glow relative z-10">
-                <AnimatedCounter value={webinars.length} /> & Counting
+                <AnimatedCounter value={projects.length} />+
               </span>
-              <span className="text-muted-foreground font-medium relative z-10">Webinars</span>
+              <span className="text-muted-foreground font-medium relative z-10">Live Projects</span>
             </div>
           </div>
         </div>

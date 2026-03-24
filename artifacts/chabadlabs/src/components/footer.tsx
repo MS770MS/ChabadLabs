@@ -71,7 +71,7 @@ export function Footer() {
               <li><Link href="/tools" className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"><span className="text-primary/50 text-xs">&gt;</span> Tools</Link></li>
               <li><Link href="/webinars" className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"><span className="text-primary/50 text-xs">&gt;</span> Webinars</Link></li>
               <li><Link href="/showcase" className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"><span className="text-primary/50 text-xs">&gt;</span> Live Projects</Link></li>
-              <li><Link href="/get-started" className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"><span className="text-primary/50 text-xs">&gt;</span> Get Started</Link></li>
+              <li><Link href="/gabai" className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"><span className="text-primary/50 text-xs">&gt;</span> Gabai</Link></li>
             </ul>
           </div>
 
