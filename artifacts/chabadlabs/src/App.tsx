@@ -13,6 +13,8 @@ import Fund from "@/pages/fund";
 import GrantApply from "@/pages/grant-apply";
 import SkillsComingSoon from "@/pages/skills-coming-soon";
 import Gabai from "@/pages/gabai";
+import AdminWebinars from "@/pages/admin-webinars";
+import AdminSubmissions from "@/pages/admin-submissions";
 import NotFound from "@/pages/not-found";
 
 // Components
@@ -44,6 +46,8 @@ function Router() {
           <Route path="/fund" component={Fund} />
           <Route path="/skills" component={SkillsComingSoon} />
           <Route path="/gabai" component={Gabai} />
+          <Route path="/admin/webinars" component={AdminWebinars} />
+          <Route path="/admin/submissions" component={AdminSubmissions} />
           <Route component={NotFound} />
         </Switch>
       </main>
