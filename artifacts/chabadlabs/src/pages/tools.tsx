@@ -10,6 +10,7 @@ import resourcesData from "@/data/resources.json";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useToast } from "@/hooks/use-toast";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -19,7 +20,11 @@ export default function Tools() {
   const [searchQuery, setSearchQuery] = useState("");
   const [activeFilter, setActiveFilter] = useState<string>("All");
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
+  const [showRecommendForm, setShowRecommendForm] = useState(false);
+  const [recommendForm, setRecommendForm] = useState({ name: "", url: "", note: "" });
+  const [recommendSubmitting, setRecommendSubmitting] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
+  const { toast } = useToast();
 
   const categories = useMemo(() => {
     const cats = new Set(resourcesData.map((r) => r.category));
@@ -87,6 +92,29 @@ export default function Tools() {
       });
     }
   }, { scope: containerRef, dependencies: [visibleResources] });
+
+  const handleRecommendSubmit = async () => {
+    if (!recommendForm.name.trim()) return;
+    setRecommendSubmitting(true);
+    try {
+      const res = await fetch("/api/submissions", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ type: "tool-recommendation", data: recommendForm }),
+      });
+      if (!res.ok) throw new Error("Failed to submit");
+      toast({
+        title: "Thanks for the recommendation!",
+        description: `We'll review "${recommendForm.name}" and add it if it's a good fit.`,
+      });
+      setRecommendForm({ name: "", url: "", note: "" });
+      setShowRecommendForm(false);
+    } catch {
+      toast({ title: "Something went wrong", description: "Please try again later.", variant: "destructive" });
+    } finally {
+      setRecommendSubmitting(false);
+    }
+  };
 
   return (
     <div ref={containerRef} className="pt-32 pb-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-screen">
@@ -246,6 +274,63 @@ export default function Tools() {
               </button>
             </div>
           )}
+
+          {/* Tool Recommendation Section */}
+          <div className="mt-16 text-center">
+            {!showRecommendForm ? (
+              <button
+                onClick={() => setShowRecommendForm(true)}
+                className="text-primary hover:text-primary/80 font-medium transition-colors text-sm"
+              >
+                Don't see a tool you'd recommend? Suggest one &rarr;
+              </button>
+            ) : (
+              <div className="card-futuristic rounded-2xl p-6 md:p-8 max-w-lg mx-auto text-left">
+                <h3 className="text-lg font-display font-bold mb-4">Recommend a Tool</h3>
+                <div className="space-y-4">
+                  <input
+                    type="text"
+                    placeholder="Tool name *"
+                    value={recommendForm.name}
+                    onChange={(e) => setRecommendForm((f) => ({ ...f, name: e.target.value }))}
+                    className="w-full bg-card border-2 border-border rounded-xl px-4 py-3 focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all text-foreground placeholder:text-muted-foreground text-sm"
+                  />
+                  <input
+                    type="url"
+                    placeholder="URL (optional)"
+                    value={recommendForm.url}
+                    onChange={(e) => setRecommendForm((f) => ({ ...f, url: e.target.value }))}
+                    className="w-full bg-card border-2 border-border rounded-xl px-4 py-3 focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all text-foreground placeholder:text-muted-foreground text-sm"
+                  />
+                  <textarea
+                    placeholder="Why do you recommend it? (optional)"
+                    value={recommendForm.note}
+                    onChange={(e) => setRecommendForm((f) => ({ ...f, note: e.target.value }))}
+                    rows={3}
+                    className="w-full bg-card border-2 border-border rounded-xl px-4 py-3 focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all text-foreground placeholder:text-muted-foreground text-sm resize-none"
+                  />
+                  <div className="flex gap-3 justify-end">
+                    <Button
+                      variant="outline"
+                      onClick={() => {
+                        setShowRecommendForm(false);
+                        setRecommendForm({ name: "", url: "", note: "" });
+                      }}
+                    >
+                      Cancel
+                    </Button>
+                    <Button
+                      className="btn-futuristic"
+                      onClick={handleRecommendSubmit}
+                      disabled={recommendSubmitting || !recommendForm.name.trim()}
+                    >
+                      {recommendSubmitting ? "Submitting..." : "Submit"}
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
         </>
       )}
     </div>

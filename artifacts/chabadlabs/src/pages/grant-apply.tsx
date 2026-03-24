@@ -19,17 +19,29 @@ export default function GrantApply() {
     fundingHelp: "",
     email: "",
   });
+  const [submitting, setSubmitting] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Thanks for your interest!",
-      description: "Grant applications will open soon. We'll reach out when ready.",
-    });
+    setSubmitting(true);
+    try {
+      const res = await fetch("/api/submissions", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ type: "grant-application", data: formData }),
+      });
+      if (!res.ok) throw new Error("Failed to submit");
+      toast({ title: "Application submitted!", description: "We'll review your application and get back to you." });
+      setFormData({ name: "", chabadHouse: "", projectName: "", builtSoFar: "", fundingHelp: "", email: "" });
+    } catch {
+      toast({ title: "Something went wrong", description: "Please try again later.", variant: "destructive" });
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   useGSAP(() => {
@@ -158,8 +170,9 @@ export default function GrantApply() {
             <Button
               type="submit"
               className="btn-futuristic w-full py-3 font-semibold mt-4"
+              disabled={submitting}
             >
-              Submit Application
+              {submitting ? "Submitting..." : "Submit Application"}
             </Button>
           </div>
         </form>
