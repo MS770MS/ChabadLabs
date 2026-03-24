@@ -1,23 +1,45 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { format, parseISO } from "date-fns";
 import { ChevronDown, ChevronUp, PlayCircle } from "lucide-react";
 import { SectionLabel } from "@/components/section-label";
 import { DifficultyBadge, Difficulty } from "@/components/difficulty-badge";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
-import webinarsData from "@/data/webinars.json";
+import webinarsJson from "@/data/webinars.json";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
+interface WebinarData {
+  id: number;
+  title: string;
+  date: string;
+  presenter: string;
+  difficulty: string;
+  summary: string;
+  takeaways: string[];
+  recordingUrl: string;
+  youtubeId?: string;
+  tags: string[];
+}
+
 export default function Webinars() {
   const [expandedId, setExpandedId] = useState<number | null>(null);
+  const [webinarsData, setWebinarsData] = useState<WebinarData[]>(webinarsJson as WebinarData[]);
   const containerRef = useRef<HTMLDivElement>(null);
 
+  // Try to load from API, fall back to static JSON
+  useEffect(() => {
+    fetch("/api/webinars")
+      .then((res) => { if (!res.ok) throw new Error(); return res.json(); })
+      .then((data) => { if (data.length > 0) setWebinarsData(data); })
+      .catch(() => { /* keep static JSON fallback */ });
+  }, []);
+
   // Sort by newest first
-  const sortedWebinars = [...webinarsData].sort((a, b) => 
+  const sortedWebinars = [...webinarsData].sort((a, b) =>
     new Date(b.date).getTime() - new Date(a.date).getTime()
   );
 

@@ -28,6 +28,24 @@ export function initDb(): Database.Database {
     )
   `);
 
+  // Create webinars table
+  db.exec(`
+    CREATE TABLE IF NOT EXISTS webinars (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      title TEXT NOT NULL,
+      date TEXT NOT NULL,
+      presenter TEXT NOT NULL DEFAULT '',
+      difficulty TEXT NOT NULL DEFAULT 'Beginner',
+      summary TEXT NOT NULL DEFAULT '',
+      takeaways TEXT NOT NULL DEFAULT '[]',
+      recording_url TEXT NOT NULL DEFAULT '#',
+      youtube_id TEXT DEFAULT '',
+      tags TEXT NOT NULL DEFAULT '[]',
+      created_at TEXT NOT NULL DEFAULT (datetime('now')),
+      updated_at TEXT NOT NULL DEFAULT (datetime('now'))
+    )
+  `);
+
   console.log("Database initialized at", dbPath);
   return db;
 }
