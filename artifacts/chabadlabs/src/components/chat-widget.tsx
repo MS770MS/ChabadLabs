@@ -10,13 +10,13 @@ interface Message {
 }
 
 const WELCOME_MESSAGE =
-  "Hey! I'm the ChabadLabs assistant. Ask me about AI tools, Nanoclaw, or how to get started. I'm still in beta — for complex questions, our WhatsApp community is the best resource.";
+  "Hey! I'm the ChabadLabs assistant. Ask me about AI tools, Gabai, or anything about AI for Chabad. I'm still in beta — for complex questions, our WhatsApp community is the best resource.";
 
 const mockResponses = [
   {
-    keywords: ["nanoclaw"],
+    keywords: ["nanoclaw", "gabai"],
     response:
-      "Nanoclaw is a secure AI agent framework built for shluchim. Check out nanoclaw.dev or our Get Started page to deploy your own.",
+      "Gabai is built on Nanoclaw — a secure AI agent framework for shluchim. Check out nanoclaw.dev or our Gabai page to deploy your own.",
   },
   {
     keywords: ["tool", "resource"],
@@ -36,7 +36,7 @@ const mockResponses = [
   {
     keywords: ["start", "begin", "new", "how"],
     response:
-      "Head to our Get Started page for a step-by-step guide — from choosing your first AI tool to deploying your own agent.",
+      "Head to our Gabai page to learn about deploying your own secure AI assistant.",
   },
   {
     keywords: ["project", "built", "showcase"],
@@ -56,7 +56,7 @@ const FALLBACK_RESPONSE =
 const SUGGESTED_PROMPTS = [
   "What is Nanoclaw?",
   "Show me AI tools",
-  "How do I get started?",
+  "What is Gabai?",
   "What grants are available?",
 ];
 
@@ -203,7 +203,7 @@ export function ChatWidget() {
                     <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse shadow-[0_0_5px_var(--primary)]" />
                   </h3>
                   <span className="text-[10px] text-muted-foreground font-mono">
-                    NANOCLAW_SECURE_ENV
+                    GABAI_SECURE_ENV
                   </span>
                 </div>
               </div>

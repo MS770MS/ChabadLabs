@@ -59,7 +59,7 @@ export default function Webinars() {
       <div className="mb-12">
         <h1 className="page-title text-4xl md:text-6xl font-display font-bold mb-4 gsap-hidden">Webinars</h1>
         <p className="page-subtitle text-xl text-muted-foreground max-w-2xl gsap-hidden">
-          Learn directly from community experts. Recorded sessions covering basics, advanced tools, and deep dives into Nanoclaw.
+          Learn directly from community experts. Recorded sessions covering AI basics, tools, and building with Gabai.
         </p>
       </div>
 
